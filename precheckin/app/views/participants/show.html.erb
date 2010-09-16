@@ -1,0 +1,47 @@
+<p>
+  <b>Firstname:</b>
+  <%=h @participant.firstName %>
+</p>
+
+<p>
+  <b>Lastname:</b>
+  <%=h @participant.lastName %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @participant.address %>
+</p>
+
+<p>
+  <%=h @participant.address2 %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @participant.city %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%=h @participant.zip %>
+</p>
+
+<p>
+  <b>Phone:</b>
+  <%=h @participant.phone %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @participant.email %>
+</p>
+
+<p>
+  <b>Ranking:</b>
+  <%=h @participant.ranking %>
+</p>
+
+
+<%= link_to 'Edit', edit_participant_path(@participant) %> |
+<%= link_to 'Back', participants_path %>

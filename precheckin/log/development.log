@@ -1,0 +1,3210 @@
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-08 16:28:15) [GET]
+  [4;36;1mTicket Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: tickets: SELECT * FROM "tickets" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: tickets: SELECT * FROM "tickets" ):
+  app/controllers/tickets_controller.rb:5:in `index'
+
+Rendered rescues/_trace (31.2ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-08 16:28:20) [GET]
+
+ActiveRecord::StatementInvalid (Could not find table 'tickets'):
+  app/controllers/tickets_controller.rb:27:in `new'
+  app/controllers/tickets_controller.rb:27:in `new'
+
+Rendered rescues/_trace (28.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.9ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateParticipants (20100908202702)
+  [4;35;1mSQL (0.5ms)[0m   [0mCREATE TABLE "participants" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "firstName" varchar(255), "lastName" varchar(255), "address" varchar(255), "city" varchar(255), "zip" integer, "phone" integer, "email" varchar(255), "ranking" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100908202702')[0m
+Migrating to CreateTickets (20100908202740)
+  [4;35;1mSQL (0.4ms)[0m   [0mCREATE TABLE "tickets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "code" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100908202740')[0m
+  [4;35;1mSQL (0.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("participants")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tickets")[0m
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-08 16:29:23) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 69ms (View: 65, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-08 16:29:29) [GET]
+  [4;36;1mTicket Load (0.3ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ParticipantsController#index (for 127.0.0.1 at 2010-09-08 16:29:36) [GET]
+  [4;35;1mParticipant Load (0.3ms)[0m   [0mSELECT * FROM "participants" [0m
+Rendering template within layouts/participants
+Rendering participants/index
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-08 16:29:45) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#index (for 127.0.0.1 at 2010-09-13 11:00:29) [GET]
+  [4;36;1mParticipant Load (20.2ms)[0m   [0;1mSELECT * FROM "participants" [0m
+Rendering template within layouts/participants
+Rendering participants/index
+Completed in 177ms (View: 153, DB: 20) | 200 OK [http://localhost/participants]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:00:37) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 63ms (View: 59, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 11:02:48) [GET]
+
+ActionController::RoutingError (No route matches "/session" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:06:30) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 57ms (View: 50, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:06:31) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:07:33) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:07:36) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 76ms (View: 71, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:08:15) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:08:21) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:10:48) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 21ms (View: 16, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:12:25) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to gif (for 127.0.0.1 at 2010-09-13 11:12:25) [GET]
+  Parameters: {"id"=>"spacer"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:12:26) [GET]
+  Parameters: {"id"=>"charlie_uniform"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:12:26) [GET]
+  Parameters: {"id"=>"main_image"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:12:26) [GET]
+  Parameters: {"id"=>"WDVE_main"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 11:12:26) [GET]
+
+ActionController::RoutingError (No route matches "/inthepocket/images/bg.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#images to gif (for 127.0.0.1 at 2010-09-13 11:12:26) [GET]
+  Parameters: {"id"=>"spacer"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:12:26) [GET]
+  Parameters: {"id"=>"charlie_uniform"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:12:26) [GET]
+  Parameters: {"id"=>"main_image"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:12:26) [GET]
+  Parameters: {"id"=>"WDVE_main"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 11:12:26) [GET]
+
+ActionController::RoutingError (No route matches "/inthepocket/images/bg.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:12:26) [GET]
+  Parameters: {"id"=>"main_image"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:12:26) [GET]
+  Parameters: {"id"=>"WDVE_main"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:12:26) [GET]
+  Parameters: {"id"=>"charlie_uniform"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 11:12:26) [GET]
+
+ActionController::RoutingError (No route matches "/inthepocket/images/bg.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#images to gif (for 127.0.0.1 at 2010-09-13 11:12:26) [GET]
+  Parameters: {"id"=>"spacer"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:13:30) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:14:03) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:14:53) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 77ms (View: 71, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:15:26) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 18ms (View: 14, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:15:46) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:15:55) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:16:43) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:17:08) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 73ms (View: 68, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:18:04) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:21:09) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 20ms (View: 15, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:21:09) [GET]
+  Parameters: {"id"=>"main_image"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:21:09) [GET]
+  Parameters: {"id"=>"main_image"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:21:10) [GET]
+  Parameters: {"id"=>"main_image"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:21:23) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 11:21:23) [GET]
+
+ActionController::RoutingError (No route matches "/main_image.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 11:21:23) [GET]
+
+ActionController::RoutingError (No route matches "/main_image.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 11:21:24) [GET]
+
+ActionController::RoutingError (No route matches "/main_image.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:21:35) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 11:21:35) [GET]
+
+ActionController::RoutingError (No route matches "/main_image.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 11:21:35) [GET]
+
+ActionController::RoutingError (No route matches "/main_image.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 11:21:36) [GET]
+
+ActionController::RoutingError (No route matches "/main_image.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:21:42) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:21:42) [GET]
+  Parameters: {"id"=>"main_image"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:21:42) [GET]
+  Parameters: {"id"=>"main_image"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:21:43) [GET]
+  Parameters: {"id"=>"main_image"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:21:46) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:21:47) [GET]
+  Parameters: {"id"=>"main_image"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:21:47) [GET]
+  Parameters: {"id"=>"main_image"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-13 11:21:47) [GET]
+  Parameters: {"id"=>"main_image"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:25:55) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 48ms (View: 43, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 11:25:56) [GET]
+
+ActionController::RoutingError (No route matches "/images/main_image.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 11:25:56) [GET]
+
+ActionController::RoutingError (No route matches "/images/main_image.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-13 11:25:56) [GET]
+
+ActionController::RoutingError (No route matches "/images/main_image.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:26:06) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:29:13) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+ERROR: compiling _run_erb_app47views47participants47new46html46erb RAISED compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected kAND, expecting ')'
+...e.jpg", :height => "200px" and :width => "666px", :alt => "M...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected ',', expecting ')'
+..."200px" and :width => "666px", :alt => "Main") ).to_s); @out...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected ')', expecting kEND
+...66px", :alt => "Main") ).to_s); @output_buffer.concat "\n</t...
+                              ^
+Function body:           def _run_erb_app47views47participants47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<center>\n<table cellpadding=\"0\" cellspacing=\"0\" width=\"666\" border=\"0\" bgcolor=\"white\">\n<TR>\n<td colspan=\"2\" height=\"20\">\n</td>\n</tr>\n<TR>\n<td>"
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag("main_image.jpg", :height => "200px" and :width => "666px", :alt => "Main") ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr>\n<td><h1>New participant</h1></td>\n</tr>\n<tr>\n<td>\t"
+
+
+
+
+
+
+;  form_for(@participant) do |f| ; @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :firstName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :firstName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :lastName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :lastName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :address ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :city ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :city ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :zip ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :zip ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :phone ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :phone ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :ranking ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :ranking ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n\t  </p>\n\t"
+
+;  end ; @output_buffer.concat "\n\n\t"
+
+; @output_buffer.concat(( link_to 'Back', participants_path ).to_s); @output_buffer.concat "\n</td>\n</tr>\n\n\n</table>\n\n\n\n\n\n\n\n"
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:71:in `compile!'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/controllers/participants_controller.rb:29:in `new'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected kAND, expecting ')'
+...e.jpg", :height => "200px" and :width => "666px", :alt => "M...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected ',', expecting ')'
+..."200px" and :width => "666px", :alt => "Main") ).to_s); @out...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected ')', expecting kEND
+...66px", :alt => "Main") ).to_s); @output_buffer.concat "\n</t...
+                              ^) on line #8 of app/views/participants/new.html.erb:
+5: </td>
+6: </tr>
+7: <TR>
+8: <td><%= image_tag("main_image.jpg", :height => "200px" and :width => "666px", :alt => "Main") %>
+9: </td>
+10: </tr>
+11: <tr>
+
+    app/views/participants/new.html.erb:71:in `compile!'
+    app/controllers/participants_controller.rb:29:in `new'
+
+Rendered rescues/_trace (100.1ms)
+Rendered rescues/_request_and_response (12.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:29:14) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+ERROR: compiling _run_erb_app47views47participants47new46html46erb RAISED compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected kAND, expecting ')'
+...e.jpg", :height => "200px" and :width => "666px", :alt => "M...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected ',', expecting ')'
+..."200px" and :width => "666px", :alt => "Main") ).to_s); @out...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected ')', expecting kEND
+...66px", :alt => "Main") ).to_s); @output_buffer.concat "\n</t...
+                              ^
+Function body:           def _run_erb_app47views47participants47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<center>\n<table cellpadding=\"0\" cellspacing=\"0\" width=\"666\" border=\"0\" bgcolor=\"white\">\n<TR>\n<td colspan=\"2\" height=\"20\">\n</td>\n</tr>\n<TR>\n<td>"
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag("main_image.jpg", :height => "200px" and :width => "666px", :alt => "Main") ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr>\n<td><h1>New participant</h1></td>\n</tr>\n<tr>\n<td>\t"
+
+
+
+
+
+
+;  form_for(@participant) do |f| ; @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :firstName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :firstName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :lastName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :lastName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :address ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :city ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :city ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :zip ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :zip ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :phone ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :phone ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :ranking ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :ranking ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n\t  </p>\n\t"
+
+;  end ; @output_buffer.concat "\n\n\t"
+
+; @output_buffer.concat(( link_to 'Back', participants_path ).to_s); @output_buffer.concat "\n</td>\n</tr>\n\n\n</table>\n\n\n\n\n\n\n\n"
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:71:in `compile!'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/controllers/participants_controller.rb:29:in `new'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected kAND, expecting ')'
+...e.jpg", :height => "200px" and :width => "666px", :alt => "M...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected ',', expecting ')'
+..."200px" and :width => "666px", :alt => "Main") ).to_s); @out...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected ')', expecting kEND
+...66px", :alt => "Main") ).to_s); @output_buffer.concat "\n</t...
+                              ^) on line #8 of app/views/participants/new.html.erb:
+5: </td>
+6: </tr>
+7: <TR>
+8: <td><%= image_tag("main_image.jpg", :height => "200px" and :width => "666px", :alt => "Main") %>
+9: </td>
+10: </tr>
+11: <tr>
+
+    app/views/participants/new.html.erb:71:in `compile!'
+    app/controllers/participants_controller.rb:29:in `new'
+
+Rendered rescues/_trace (38.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:29:29) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+ERROR: compiling _run_erb_app47views47participants47new46html46erb RAISED compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected tASSOC, expecting ')'
+...:height => "200px" & :width => "666px", :alt => "Main") ).to...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected ',', expecting ')'
+...> "200px" & :width => "666px", :alt => "Main") ).to_s); @out...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected ')', expecting kEND
+...66px", :alt => "Main") ).to_s); @output_buffer.concat "\n</t...
+                              ^
+Function body:           def _run_erb_app47views47participants47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<center>\n<table cellpadding=\"0\" cellspacing=\"0\" width=\"666\" border=\"0\" bgcolor=\"white\">\n<TR>\n<td colspan=\"2\" height=\"20\">\n</td>\n</tr>\n<TR>\n<td>"
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag("main_image.jpg", :height => "200px" & :width => "666px", :alt => "Main") ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr>\n<td><h1>New participant</h1></td>\n</tr>\n<tr>\n<td>\t"
+
+
+
+
+
+
+;  form_for(@participant) do |f| ; @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :firstName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :firstName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :lastName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :lastName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :address ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :city ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :city ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :zip ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :zip ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :phone ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :phone ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :ranking ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :ranking ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n\t  </p>\n\t"
+
+;  end ; @output_buffer.concat "\n\n\t"
+
+; @output_buffer.concat(( link_to 'Back', participants_path ).to_s); @output_buffer.concat "\n</td>\n</tr>\n\n\n</table>\n\n\n\n\n\n\n\n"
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:71:in `compile!'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/controllers/participants_controller.rb:29:in `new'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected tASSOC, expecting ')'
+...:height => "200px" & :width => "666px", :alt => "Main") ).to...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected ',', expecting ')'
+...> "200px" & :width => "666px", :alt => "Main") ).to_s); @out...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:8: syntax error, unexpected ')', expecting kEND
+...66px", :alt => "Main") ).to_s); @output_buffer.concat "\n</t...
+                              ^) on line #8 of app/views/participants/new.html.erb:
+5: </td>
+6: </tr>
+7: <TR>
+8: <td><%= image_tag("main_image.jpg", :height => "200px" & :width => "666px", :alt => "Main") %>
+9: </td>
+10: </tr>
+11: <tr>
+
+    app/views/participants/new.html.erb:71:in `compile!'
+    app/controllers/participants_controller.rb:29:in `new'
+
+Rendered rescues/_trace (98.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:29:41) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 18ms (View: 13, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:31:43) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 36ms (View: 30, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:31:52) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:33:27) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 20ms (View: 16, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:33:58) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:34:16) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:35:34) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:35:48) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:38:07) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 46ms (View: 42, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:38:13) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+ERROR: compiling _run_erb_app47views47participants47new46html46erb RAISED compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+; @output_buffer.concat(("*" f.label :firstName ).to_s); @ou...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+; @output_buffer.concat(("*" f.label :lastName ).to_s); @out...
+                              ^
+Function body:           def _run_erb_app47views47participants47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<center>\n<table cellpadding=\"0\" cellspacing=\"0\" width=\"666\" border=\"0\" bgcolor=\"white\">\n<TR>\n<td colspan=\"2\" height=\"20\">\n</td>\n</tr>\n<TR>\n<td>"
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag("inThePocket.jpg", :alt => "Main") ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr>\n<td class=\"white\"><h1>Please fill out the information below to make your check in process faster.\n\tRequired Fields(*)</h1></td>\n</tr>\n<tr>\n<td class=\"white\">\t"
+
+
+
+
+
+
+
+;  form_for(@participant) do |f| ; @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*" f.label :firstName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :firstName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*" f.label :lastName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :lastName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :address ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :city ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :city ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :zip ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :zip ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :phone ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :phone ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :ranking ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :ranking ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n\t  </p>\n\t"
+
+;  end ; @output_buffer.concat "\n\n\t"
+
+; @output_buffer.concat(( link_to 'Back', participants_path ).to_s); @output_buffer.concat "\n</td>\n</tr>\n\n\n</table>\n\n\n\n\n\n\n\n"
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:72:in `compile!'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/controllers/participants_controller.rb:29:in `new'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tIDENTIFIER, expecting ')'
+; @output_buffer.concat(("*" f.label :firstName ).to_s); @ou...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tIDENTIFIER, expecting ')'
+; @output_buffer.concat(("*" f.label :lastName ).to_s); @out...
+                              ^) on line #20 of app/views/participants/new.html.erb:
+17: 	  <%= f.error_messages %>
+18: 
+19: 	  <p>
+20: 	    <%="*" f.label :firstName %><br />
+21: 	    <%= f.text_field :firstName %>
+22: 	  </p>
+23: 	  <p>
+
+    app/views/participants/new.html.erb:72:in `compile!'
+    app/controllers/participants_controller.rb:29:in `new'
+
+Rendered rescues/_trace (36.3ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:38:29) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+ERROR: compiling _run_erb_app47views47participants47new46html46erb RAISED compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :firstName ).to_s); @output_buf...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :lastName ).to_s); @output_buff...
+                              ^
+Function body:           def _run_erb_app47views47participants47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<center>\n<table cellpadding=\"0\" cellspacing=\"0\" width=\"666\" border=\"0\" bgcolor=\"white\">\n<TR>\n<td colspan=\"2\" height=\"20\">\n</td>\n</tr>\n<TR>\n<td>"
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag("inThePocket.jpg", :alt => "Main") ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr>\n<td class=\"white\"><h1>Please fill out the information below to make your check in process faster.\n\tRequired Fields(*)</h1></td>\n</tr>\n<tr>\n<td class=\"white\">\t"
+
+
+
+
+
+
+
+;  form_for(@participant) do |f| ; @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*"+ f.label :firstName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :firstName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*"+ f.label :lastName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :lastName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :address ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :city ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :city ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :zip ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :zip ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :phone ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :phone ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :ranking ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :ranking ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n\t  </p>\n\t"
+
+;  end ; @output_buffer.concat "\n\n\t"
+
+; @output_buffer.concat(( link_to 'Back', participants_path ).to_s); @output_buffer.concat "\n</td>\n</tr>\n\n\n</table>\n\n\n\n\n\n\n\n"
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:72:in `compile!'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/controllers/participants_controller.rb:29:in `new'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :firstName ).to_s); @output_buf...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :lastName ).to_s); @output_buff...
+                              ^) on line #20 of app/views/participants/new.html.erb:
+17: 	  <%= f.error_messages %>
+18: 
+19: 	  <p>
+20: 	    <%="*"+ f.label :firstName %><br />
+21: 	    <%= f.text_field :firstName %>
+22: 	  </p>
+23: 	  <p>
+
+    app/views/participants/new.html.erb:72:in `compile!'
+    app/controllers/participants_controller.rb:29:in `new'
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:38:30) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+ERROR: compiling _run_erb_app47views47participants47new46html46erb RAISED compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :firstName ).to_s); @output_buf...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :lastName ).to_s); @output_buff...
+                              ^
+Function body:           def _run_erb_app47views47participants47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<center>\n<table cellpadding=\"0\" cellspacing=\"0\" width=\"666\" border=\"0\" bgcolor=\"white\">\n<TR>\n<td colspan=\"2\" height=\"20\">\n</td>\n</tr>\n<TR>\n<td>"
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag("inThePocket.jpg", :alt => "Main") ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr>\n<td class=\"white\"><h1>Please fill out the information below to make your check in process faster.\n\tRequired Fields(*)</h1></td>\n</tr>\n<tr>\n<td class=\"white\">\t"
+
+
+
+
+
+
+
+;  form_for(@participant) do |f| ; @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*"+ f.label :firstName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :firstName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*"+ f.label :lastName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :lastName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :address ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :city ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :city ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :zip ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :zip ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :phone ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :phone ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :ranking ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :ranking ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n\t  </p>\n\t"
+
+;  end ; @output_buffer.concat "\n\n\t"
+
+; @output_buffer.concat(( link_to 'Back', participants_path ).to_s); @output_buffer.concat "\n</td>\n</tr>\n\n\n</table>\n\n\n\n\n\n\n\n"
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:72:in `compile!'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/controllers/participants_controller.rb:29:in `new'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :firstName ).to_s); @output_buf...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :lastName ).to_s); @output_buff...
+                              ^) on line #20 of app/views/participants/new.html.erb:
+17: 	  <%= f.error_messages %>
+18: 
+19: 	  <p>
+20: 	    <%="*"+ f.label :firstName %><br />
+21: 	    <%= f.text_field :firstName %>
+22: 	  </p>
+23: 	  <p>
+
+    app/views/participants/new.html.erb:72:in `compile!'
+    app/controllers/participants_controller.rb:29:in `new'
+
+Rendered rescues/_trace (33.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:38:30) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+ERROR: compiling _run_erb_app47views47participants47new46html46erb RAISED compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :firstName ).to_s); @output_buf...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :lastName ).to_s); @output_buff...
+                              ^
+Function body:           def _run_erb_app47views47participants47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<center>\n<table cellpadding=\"0\" cellspacing=\"0\" width=\"666\" border=\"0\" bgcolor=\"white\">\n<TR>\n<td colspan=\"2\" height=\"20\">\n</td>\n</tr>\n<TR>\n<td>"
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag("inThePocket.jpg", :alt => "Main") ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr>\n<td class=\"white\"><h1>Please fill out the information below to make your check in process faster.\n\tRequired Fields(*)</h1></td>\n</tr>\n<tr>\n<td class=\"white\">\t"
+
+
+
+
+
+
+
+;  form_for(@participant) do |f| ; @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*"+ f.label :firstName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :firstName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*"+ f.label :lastName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :lastName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :address ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :city ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :city ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :zip ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :zip ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :phone ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :phone ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :ranking ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :ranking ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n\t  </p>\n\t"
+
+;  end ; @output_buffer.concat "\n\n\t"
+
+; @output_buffer.concat(( link_to 'Back', participants_path ).to_s); @output_buffer.concat "\n</td>\n</tr>\n\n\n</table>\n\n\n\n\n\n\n\n"
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:72:in `compile!'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/controllers/participants_controller.rb:29:in `new'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :firstName ).to_s); @output_buf...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :lastName ).to_s); @output_buff...
+                              ^) on line #20 of app/views/participants/new.html.erb:
+17: 	  <%= f.error_messages %>
+18: 
+19: 	  <p>
+20: 	    <%="*"+ f.label :firstName %><br />
+21: 	    <%= f.text_field :firstName %>
+22: 	  </p>
+23: 	  <p>
+
+    app/views/participants/new.html.erb:72:in `compile!'
+    app/controllers/participants_controller.rb:29:in `new'
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:38:30) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+ERROR: compiling _run_erb_app47views47participants47new46html46erb RAISED compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :firstName ).to_s); @output_buf...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :lastName ).to_s); @output_buff...
+                              ^
+Function body:           def _run_erb_app47views47participants47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<center>\n<table cellpadding=\"0\" cellspacing=\"0\" width=\"666\" border=\"0\" bgcolor=\"white\">\n<TR>\n<td colspan=\"2\" height=\"20\">\n</td>\n</tr>\n<TR>\n<td>"
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag("inThePocket.jpg", :alt => "Main") ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr>\n<td class=\"white\"><h1>Please fill out the information below to make your check in process faster.\n\tRequired Fields(*)</h1></td>\n</tr>\n<tr>\n<td class=\"white\">\t"
+
+
+
+
+
+
+
+;  form_for(@participant) do |f| ; @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*"+ f.label :firstName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :firstName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*"+ f.label :lastName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :lastName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :address ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :city ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :city ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :zip ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :zip ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :phone ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :phone ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :ranking ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :ranking ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n\t  </p>\n\t"
+
+;  end ; @output_buffer.concat "\n\n\t"
+
+; @output_buffer.concat(( link_to 'Back', participants_path ).to_s); @output_buffer.concat "\n</td>\n</tr>\n\n\n</table>\n\n\n\n\n\n\n\n"
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:72:in `compile!'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/controllers/participants_controller.rb:29:in `new'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :firstName ).to_s); @output_buf...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :lastName ).to_s); @output_buff...
+                              ^) on line #20 of app/views/participants/new.html.erb:
+17: 	  <%= f.error_messages %>
+18: 
+19: 	  <p>
+20: 	    <%="*"+ f.label :firstName %><br />
+21: 	    <%= f.text_field :firstName %>
+22: 	  </p>
+23: 	  <p>
+
+    app/views/participants/new.html.erb:72:in `compile!'
+    app/controllers/participants_controller.rb:29:in `new'
+
+Rendered rescues/_trace (98.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:38:30) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+ERROR: compiling _run_erb_app47views47participants47new46html46erb RAISED compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :firstName ).to_s); @output_buf...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :lastName ).to_s); @output_buff...
+                              ^
+Function body:           def _run_erb_app47views47participants47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<center>\n<table cellpadding=\"0\" cellspacing=\"0\" width=\"666\" border=\"0\" bgcolor=\"white\">\n<TR>\n<td colspan=\"2\" height=\"20\">\n</td>\n</tr>\n<TR>\n<td>"
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag("inThePocket.jpg", :alt => "Main") ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr>\n<td class=\"white\"><h1>Please fill out the information below to make your check in process faster.\n\tRequired Fields(*)</h1></td>\n</tr>\n<tr>\n<td class=\"white\">\t"
+
+
+
+
+
+
+
+;  form_for(@participant) do |f| ; @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*"+ f.label :firstName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :firstName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*"+ f.label :lastName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :lastName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :address ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :city ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :city ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :zip ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :zip ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :phone ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :phone ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :ranking ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :ranking ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n\t  </p>\n\t"
+
+;  end ; @output_buffer.concat "\n\n\t"
+
+; @output_buffer.concat(( link_to 'Back', participants_path ).to_s); @output_buffer.concat "\n</td>\n</tr>\n\n\n</table>\n\n\n\n\n\n\n\n"
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:72:in `compile!'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/controllers/participants_controller.rb:29:in `new'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :firstName ).to_s); @output_buf...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :lastName ).to_s); @output_buff...
+                              ^) on line #20 of app/views/participants/new.html.erb:
+17: 	  <%= f.error_messages %>
+18: 
+19: 	  <p>
+20: 	    <%="*"+ f.label :firstName %><br />
+21: 	    <%= f.text_field :firstName %>
+22: 	  </p>
+23: 	  <p>
+
+    app/views/participants/new.html.erb:72:in `compile!'
+    app/controllers/participants_controller.rb:29:in `new'
+
+Rendered rescues/_trace (44.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:38:31) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+ERROR: compiling _run_erb_app47views47participants47new46html46erb RAISED compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :firstName ).to_s); @output_buf...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :lastName ).to_s); @output_buff...
+                              ^
+Function body:           def _run_erb_app47views47participants47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<center>\n<table cellpadding=\"0\" cellspacing=\"0\" width=\"666\" border=\"0\" bgcolor=\"white\">\n<TR>\n<td colspan=\"2\" height=\"20\">\n</td>\n</tr>\n<TR>\n<td>"
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag("inThePocket.jpg", :alt => "Main") ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr>\n<td class=\"white\"><h1>Please fill out the information below to make your check in process faster.\n\tRequired Fields(*)</h1></td>\n</tr>\n<tr>\n<td class=\"white\">\t"
+
+
+
+
+
+
+
+;  form_for(@participant) do |f| ; @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*"+ f.label :firstName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :firstName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*"+ f.label :lastName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :lastName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :address ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :city ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :city ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :zip ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :zip ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :phone ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :phone ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :ranking ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :ranking ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n\t  </p>\n\t"
+
+;  end ; @output_buffer.concat "\n\n\t"
+
+; @output_buffer.concat(( link_to 'Back', participants_path ).to_s); @output_buffer.concat "\n</td>\n</tr>\n\n\n</table>\n\n\n\n\n\n\n\n"
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:72:in `compile!'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/controllers/participants_controller.rb:29:in `new'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :firstName ).to_s); @output_buf...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :lastName ).to_s); @output_buff...
+                              ^) on line #20 of app/views/participants/new.html.erb:
+17: 	  <%= f.error_messages %>
+18: 
+19: 	  <p>
+20: 	    <%="*"+ f.label :firstName %><br />
+21: 	    <%= f.text_field :firstName %>
+22: 	  </p>
+23: 	  <p>
+
+    app/views/participants/new.html.erb:72:in `compile!'
+    app/controllers/participants_controller.rb:29:in `new'
+
+Rendered rescues/_trace (99.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:38:31) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+ERROR: compiling _run_erb_app47views47participants47new46html46erb RAISED compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :firstName ).to_s); @output_buf...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :lastName ).to_s); @output_buff...
+                              ^
+Function body:           def _run_erb_app47views47participants47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<center>\n<table cellpadding=\"0\" cellspacing=\"0\" width=\"666\" border=\"0\" bgcolor=\"white\">\n<TR>\n<td colspan=\"2\" height=\"20\">\n</td>\n</tr>\n<TR>\n<td>"
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag("inThePocket.jpg", :alt => "Main") ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr>\n<td class=\"white\"><h1>Please fill out the information below to make your check in process faster.\n\tRequired Fields(*)</h1></td>\n</tr>\n<tr>\n<td class=\"white\">\t"
+
+
+
+
+
+
+
+;  form_for(@participant) do |f| ; @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*"+ f.label :firstName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :firstName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*"+ f.label :lastName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :lastName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :address ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :city ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :city ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :zip ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :zip ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :phone ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :phone ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :ranking ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :ranking ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n\t  </p>\n\t"
+
+;  end ; @output_buffer.concat "\n\n\t"
+
+; @output_buffer.concat(( link_to 'Back', participants_path ).to_s); @output_buffer.concat "\n</td>\n</tr>\n\n\n</table>\n\n\n\n\n\n\n\n"
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:72:in `compile!'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/controllers/participants_controller.rb:29:in `new'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :firstName ).to_s); @output_buf...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :lastName ).to_s); @output_buff...
+                              ^) on line #20 of app/views/participants/new.html.erb:
+17: 	  <%= f.error_messages %>
+18: 
+19: 	  <p>
+20: 	    <%="*"+ f.label :firstName %><br />
+21: 	    <%= f.text_field :firstName %>
+22: 	  </p>
+23: 	  <p>
+
+    app/views/participants/new.html.erb:72:in `compile!'
+    app/controllers/participants_controller.rb:29:in `new'
+
+Rendered rescues/_trace (35.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:38:31) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+ERROR: compiling _run_erb_app47views47participants47new46html46erb RAISED compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :firstName ).to_s); @output_buf...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :lastName ).to_s); @output_buff...
+                              ^
+Function body:           def _run_erb_app47views47participants47new46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<center>\n<table cellpadding=\"0\" cellspacing=\"0\" width=\"666\" border=\"0\" bgcolor=\"white\">\n<TR>\n<td colspan=\"2\" height=\"20\">\n</td>\n</tr>\n<TR>\n<td>"
+
+
+
+
+
+
+; @output_buffer.concat(( image_tag("inThePocket.jpg", :alt => "Main") ).to_s); @output_buffer.concat "\n</td>\n</tr>\n<tr>\n<td class=\"white\"><h1>Please fill out the information below to make your check in process faster.\n\tRequired Fields(*)</h1></td>\n</tr>\n<tr>\n<td class=\"white\">\t"
+
+
+
+
+
+
+
+;  form_for(@participant) do |f| ; @output_buffer.concat "\n\t  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*"+ f.label :firstName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :firstName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(("*"+ f.label :lastName ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :lastName ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :address ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :address ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :city ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :city ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :zip ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :zip ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :phone ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :phone ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.label :ranking ).to_s); @output_buffer.concat "<br />\n\t    "
+; @output_buffer.concat(( f.text_field :ranking ).to_s); @output_buffer.concat "\n\t  </p>\n\t  <p>\n\t    "
+
+
+; @output_buffer.concat(( f.submit 'Create' ).to_s); @output_buffer.concat "\n\t  </p>\n\t"
+
+;  end ; @output_buffer.concat "\n\n\t"
+
+; @output_buffer.concat(( link_to 'Back', participants_path ).to_s); @output_buffer.concat "\n</td>\n</tr>\n\n\n</table>\n\n\n\n\n\n\n\n"
+
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:72:in `compile!'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:942:in `render_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `custom'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/controllers/participants_controller.rb:29:in `new'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/Users/garret/.gem/ruby/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+/Users/garret/.gem/ruby/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+/Users/garret/.gem/ruby/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/chunked.rb:15:in `call'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:67:in `process'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:159:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `each'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:158:in `process_client'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:285:in `run'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `initialize'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `new'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/lib/mongrel.rb:268:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rack-1.1.0/lib/rack/handler/mongrel.rb:38:in `run'
+/Users/garret/.gem/ruby/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+/System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:20: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :firstName ).to_s); @output_buf...
+                              ^
+/Users/garret/Documents/67-475/best_of_batch/precheckin/app/views/participants/new.html.erb:24: syntax error, unexpected tSYMBEG, expecting ')'
+..._buffer.concat(("*"+ f.label :lastName ).to_s); @output_buff...
+                              ^) on line #20 of app/views/participants/new.html.erb:
+17: 	  <%= f.error_messages %>
+18: 
+19: 	  <p>
+20: 	    <%="*"+ f.label :firstName %><br />
+21: 	    <%= f.text_field :firstName %>
+22: 	  </p>
+23: 	  <p>
+
+    app/views/participants/new.html.erb:72:in `compile!'
+    app/controllers/participants_controller.rb:29:in `new'
+
+Rendered rescues/_trace (34.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:38:43) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 21ms (View: 15, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:38:56) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:39:24) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 19ms (View: 15, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:41:12) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 20ms (View: 14, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:41:32) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:41:48) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-13 11:45:24) [GET]
+  [4;35;1mTicket Load (12.7ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 31ms (View: 15, DB: 13) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:45:27) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 57ms (View: 53, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:47:41) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:47:54) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:47:55) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:48:06) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:48:13) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:48:16) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:48:34) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:48:55) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:49:20) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:49:39) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 69ms (View: 9, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:49:59) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:50:23) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:50:34) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 71ms (View: 64, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:52:04) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+
+ActionView::TemplateError (undefined local variable or method `help' for #<ActionView::Base:0x10523ae00>) on line #14 of app/views/tickets/new.html.erb:
+11: <tr>
+12: 	<td width="300"><h1>Why Pre-Checkin?</h1>
+13: 	</td>
+14: <td class="white"><h1>Sign in with a Ticket</h1>(<%=link_to(help)%>)</td>
+15: </tr>
+16: <tr>
+17: 	<td width="300">-It's easy<br>
+
+    app/views/tickets/new.html.erb:14
+    app/controllers/tickets_controller.rb:29:in `new'
+
+Rendered rescues/_trace (34.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:52:13) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:52:33) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:53:01) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:53:13) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 13ms (View: 10, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:53:27) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:53:34) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:54:05) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:54:15) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 17ms (View: 11, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:54:46) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 11:55:14) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 20ms (View: 16, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-13 11:56:04) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 43ms (View: 38, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-13 12:24:57) [POST]
+  Parameters: {"ticket"=>{"number"=>"", "code"=>""}, "commit"=>"Submit", "authenticity_token"=>"aw1jiXArnqRYL5B933D0WOw3EsttiNGl6CTGfoKeC+k="}
+  [4;36;1mTicket Create (26.8ms)[0m   [0;1mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(NULL, '2010-09-13 16:24:57', '', '2010-09-13 16:24:57')[0m
+Redirected to http://localhost:3000/tickets/1
+Completed in 49ms (DB: 27) | 302 Found [http://localhost/tickets]
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2010-09-13 12:24:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mTicket Load (0.2ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 1) [0m
+Rendering template within layouts/tickets
+Rendering tickets/show
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/tickets/1]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-13 12:25:00) [GET]
+  [4;36;1mTicket Load (0.4ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 8ms (View: 4, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 14:25:00) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 97ms (View: 92, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-13 16:00:29) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 15ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/new]
+  [4;36;1mSQL (0.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateParticipants (20100908202702)
+Migrating to CreateTickets (20100908202740)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("participants")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("tickets")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-15 15:09:45) [GET]
+
+SyntaxError (/Users/garret/Documents/67-475/best_of_batch/precheckin/app/controllers/tickets_controller.rb:48: syntax error, unexpected ':', expecting kEND
+...o(participant_path(@ticket)) : render(:action => :new)
+                              ^):
+  
+
+Rendered rescues/_trace (25.9ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-15 15:10:12) [GET]
+  [4;36;1mTicket Load (6.2ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 153ms (View: 129, DB: 6) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-15 15:10:15) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 22ms (View: 16, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-15 15:10:25) [POST]
+  Parameters: {"ticket"=>{"number"=>"123", "code"=>"B3b"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;35;1mTicket Create (0.5ms)[0m   [0mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(123, '2010-09-15 19:10:25', 'B3b', '2010-09-15 19:10:25')[0m
+Redirected to http://localhost:3000/participants/2
+
+NoMethodError (undefined method `call' for nil:NilClass):
+  app/controllers/tickets_controller.rb:46:in `create'
+
+Rendered rescues/_trace (84.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-15 15:11:13) [POST]
+  Parameters: {"ticket"=>{"number"=>"123", "code"=>"B3b"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;36;1mTicket Create (0.4ms)[0m   [0;1mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(123, '2010-09-15 19:11:13', 'B3b', '2010-09-15 19:11:13')[0m
+Redirected to http://localhost:3000/tickets/3
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/tickets]
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2010-09-15 15:11:13) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mTicket Load (0.2ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 3) [0m
+Rendering template within layouts/tickets
+Rendering tickets/show
+Completed in 24ms (View: 18, DB: 0) | 200 OK [http://localhost/tickets/3]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-15 16:21:19) [GET]
+  [4;36;1mTicket Load (0.6ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 65ms (View: 9, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-15 16:21:21) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 73ms (View: 68, DB: 0) | 200 OK [http://localhost/tickets/new]

@@ -1,0 +1,90 @@
+
+body {
+    margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color: #4F1A1B;
+    }
+
+.header {
+    font-family: verdana, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #124b1d;
+    line-height: 15px;
+    text-decoration: none;
+    font-weight:bold;
+}
+
+.whitemain {
+    font-family: verdana, Helvetica, sans-serif;
+    font-size: 13px;
+    color: #421213;
+    line-height: 17px;
+    text-decoration: none;
+    font-weight:;
+}
+
+.white {
+    font-family: verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #421213;
+    line-height: 16px;
+    text-decoration: none;
+    font-weight:;
+}
+
+.whitebig {
+    font-family: verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    color: #421213;
+    line-height: 17px;
+    text-decoration: none;
+    font-weight:;
+}
+
+
+.yellow {
+    font-family: verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #124b1d;
+    line-height: 16px;
+    text-decoration: none;
+    font-weight:bold;
+}
+
+.yellowsm {
+    font-family: verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #124b1d;
+    line-height: 16px;
+    text-decoration: none;
+    font-weight:bold;
+}
+
+.yellowbig {
+    font-family: verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #124b1d;
+    line-height: 15px;
+    text-decoration: none;
+    font-weight:;
+}
+
+
+.yellow:hover {
+    font-family: verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #B47E18;
+    line-height: 16px;
+    text-decoration: none;
+    font-weight:bold;
+}
+
+tr{
+	margin-left:10px;
+}
+
+td{
+	padding-left:15px;
+	margin-left:15px;
+}

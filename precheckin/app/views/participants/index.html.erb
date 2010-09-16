@@ -1,0 +1,34 @@
+<h1>Listing participants</h1>
+
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Address</th>
+    <th>City</th>
+    <th>Zip</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Ranking</th>
+  </tr>
+
+<% @participants.each do |participant| %>
+  <tr>
+    <td><%=h participant.firstName %></td>
+    <td><%=h participant.lastName %></td>
+    <td><%=h participant.address %></td>
+    <td><%=h participant.city %></td>
+    <td><%=h participant.zip %></td>
+    <td><%=h participant.phone %></td>
+    <td><%=h participant.email %></td>
+    <td><%=h participant.ranking %></td>
+    <td><%= link_to 'Show', participant %></td>
+    <td><%= link_to 'Edit', edit_participant_path(participant) %></td>
+    <td><%= link_to 'Destroy', participant, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New participant', new_participant_path %>

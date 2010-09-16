@@ -1,0 +1,13 @@
+<p>
+  <b>Number:</b>
+  <%=h @ticket.number %>
+</p>
+
+<p>
+  <b>Code:</b>
+  <%=h @ticket.code %>
+</p>
+
+
+<%= link_to 'Edit', edit_ticket_path(@ticket) %> |
+<%= link_to 'Back', tickets_path %>
