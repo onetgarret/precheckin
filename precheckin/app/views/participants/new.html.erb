@@ -16,41 +16,57 @@
 	  <%= f.error_messages %>
 
 	  <p>
-	    <%= f.label :firstName %><br />
+	    <%= "*First Name" %><br />
 	    <%= f.text_field :firstName %>
 	  </p>
 	  <p>
-	    <%= f.label :lastName %><br />
+	    <%= "*Last Name" %><br />
 	    <%= f.text_field :lastName %>
 	  </p>
 	  <p>
-	    <%= f.label :address %><br />
+	    <%="*Street" %><br />
 	    <%= f.text_field :address %>
 	  </p>
 	  <p>
-	    <%= f.label :address2 %><br />
+	    <%= "Street (line 2)" %><br />
 	    <%= f.text_field :address2 %>
 	  </p>
 	  <p>
-	    <%= f.label :city %><br />
+	    <%= "*City" %><br />
 	    <%= f.text_field :city %>
 	  </p>
 	  <p>
-	    <%= f.label :zip %><br />
-	    <%= f.text_field :zip %>
-	  </p>
+	    <%= "*State" %><br />
+	    <%= f.text_field :state %>
+	  </p>	
 	  <p>
-	    <%= f.label :phone %><br />
-	    <%= f.text_field :phone %>
+	    <%= "*Zip" %><br />
+	    <%= f.text_field :zip %>
 	  </p>
 	  <p>
 	    <%= f.label :email %><br />
 	    <%= f.text_field :email %>
 	  </p>
-	  <p>
-	    <%= f.label :ranking %><br />
-	    <%= f.text_field :ranking %>
+	   <p>
+		 <%= f.check_box :subscribe %>
+	    <%= "check to receive email notifications from The Best of the Batch Foundation" %>
+	   
 	  </p>
+	<h2>Game Ranking</h2>
+	<div width="400" style="margin-left:20px;">
+	  <p>
+	    <%= "First Choice"%><br />
+	    <%= f.select :ranking, (["Pool","Ping-Pong","Poker"]) %>
+	  </p>
+	  <p>
+	    <%= "Second Choice" %><br />
+	     <%= f.select :ranking2, (["Pool","Ping-Pong","Poker"]) %>
+	  </p>
+	  <p>
+	    <%= 'Third Choice' %><br />
+	     <%= f.select :ranking3, (["Pool","Ping-Pong","Poker"]) %>
+	  </p>
+	</div>
 	  <p>
 	    <%= f.submit 'Submit' %>
 	  </p>
@@ -67,6 +83,7 @@
 
 </table>
 
+<%= render :partial => "partials/footer" %>
 
 
 

@@ -3208,3 +3208,926 @@ Processing TicketsController#new (for 127.0.0.1 at 2010-09-15 16:21:21) [GET]
 Rendering template within layouts/tickets
 Rendering tickets/new
 Completed in 73ms (View: 68, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-19 17:25:40) [GET]
+  [4;36;1mTicket Load (33.8ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 237ms (View: 177, DB: 34) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:29:08) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 44ms (View: 39, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:30:35) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:30:36) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 67ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:30:36) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:30:37) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:31:02) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:31:03) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:31:03) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:31:04) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 69ms (View: 62, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-19 17:31:54) [GET]
+
+ActionController::RoutingError (No route matches "/participant_rounds" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:33:51) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:33:52) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:33:52) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 12ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:33:53) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:35:40) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:36:34) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:36:35) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:36:35) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 12ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:36:35) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:36:36) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:36:36) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:36:36) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:36:37) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:36:37) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:36:37) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 11ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:36:37) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 12ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:37:08) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:38:17) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.8ms)
+Completed in 76ms (View: 14, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#images to gif (for 127.0.0.1 at 2010-09-19 17:38:17) [GET]
+  Parameters: {"id"=>"batch_sm"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#images to jpg (for 127.0.0.1 at 2010-09-19 17:38:17) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:40:07) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.8ms)
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#images to jpg (for 127.0.0.1 at 2010-09-19 17:40:07) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:41:02) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.2ms)
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#images to jpg (for 127.0.0.1 at 2010-09-19 17:41:02) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:41:34) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.9ms)
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#images to jpg (for 127.0.0.1 at 2010-09-19 17:41:34) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:45:43) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/tickets/new]
+
+
+Processing TicketsController#images to jpg (for 127.0.0.1 at 2010-09-19 17:45:43) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 17:45:49) [POST]
+  Parameters: {"ticket"=>{"number"=>"1234", "code"=>"1d3"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;35;1mTicket Create (0.5ms)[0m   [0mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(1234, '2010-09-19 21:45:49', '1d3', '2010-09-19 21:45:49')[0m
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/tickets_controller.rb:48:in `create'
+  app/controllers/tickets_controller.rb:45:in `create'
+
+Rendered rescues/_trace (81.2ms)
+Rendered rescues/_request_and_response (1.1ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 17:47:03) [POST]
+  Parameters: {"ticket"=>{"number"=>"1234", "code"=>"1d3"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;36;1mTicket Create (0.9ms)[0m   [0;1mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(1234, '2010-09-19 21:47:03', '1d3', '2010-09-19 21:47:03')[0m
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/tickets_controller.rb:48:in `create'
+  app/controllers/tickets_controller.rb:45:in `create'
+
+Rendered rescues/_trace (37.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 17:47:53) [POST]
+  Parameters: {"ticket"=>{"number"=>"1234", "code"=>"1d3"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;35;1mTicket Create (0.5ms)[0m   [0mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(1234, '2010-09-19 21:47:53', '1d3', '2010-09-19 21:47:53')[0m
+
+ActionController::ActionControllerError (Cannot redirect to nil!):
+  app/controllers/tickets_controller.rb:48:in `create'
+  app/controllers/tickets_controller.rb:45:in `create'
+
+Rendered rescues/_trace (106.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 17:49:17) [POST]
+  Parameters: {"ticket"=>{"number"=>"1234", "code"=>"1d3"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;36;1mTicket Create (0.5ms)[0m   [0;1mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(1234, '2010-09-19 21:49:17', '1d3', '2010-09-19 21:49:17')[0m
+Redirected to http://localhost:3000/tickets/7
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/tickets]
+
+
+Processing TicketsController#show (for 127.0.0.1 at 2010-09-19 17:49:17) [GET]
+  Parameters: {"id"=>"7"}
+  [4;35;1mTicket Load (0.2ms)[0m   [0mSELECT * FROM "tickets" WHERE ("tickets"."id" = 7) [0m
+Rendering template within layouts/tickets
+Rendering tickets/show
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/tickets/7]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-19 17:49:19) [GET]
+  [4;36;1mTicket Load (0.7ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+
+ActionView::TemplateError (Missing template tickets/_footer.erb in view path app/views) on line #25 of app/views/tickets/index.html.erb:
+22: <%= link_to 'New ticket', new_ticket_path %>
+23: 
+24: 
+25: <%= render :partial => 'footer'%>
+
+    app/views/tickets/index.html.erb:25
+    app/controllers/tickets_controller.rb:7:in `index'
+
+Rendered rescues/_trace (107.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-19 17:49:35) [GET]
+  [4;35;1mTicket Load (1.3ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+
+ActionView::TemplateError (Missing template tickets/_footer.erb in view path app/views) on line #25 of app/views/tickets/index.html.erb:
+22: <%= link_to 'New ticket', new_ticket_path %>
+23: 
+24: 
+25: <%= render :partial => 'footer'%>
+
+    app/views/tickets/index.html.erb:25
+    app/controllers/tickets_controller.rb:7:in `index'
+
+Rendered rescues/_trace (102.4ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-19 17:49:36) [GET]
+  [4;36;1mTicket Load (0.6ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+
+ActionView::TemplateError (Missing template tickets/_footer.erb in view path app/views) on line #25 of app/views/tickets/index.html.erb:
+22: <%= link_to 'New ticket', new_ticket_path %>
+23: 
+24: 
+25: <%= render :partial => 'footer'%>
+
+    app/views/tickets/index.html.erb:25
+    app/controllers/tickets_controller.rb:7:in `index'
+
+Rendered rescues/_trace (36.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-19 17:49:37) [GET]
+  [4;35;1mTicket Load (0.9ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+
+ActionView::TemplateError (Missing template tickets/_footer.erb in view path app/views) on line #25 of app/views/tickets/index.html.erb:
+22: <%= link_to 'New ticket', new_ticket_path %>
+23: 
+24: 
+25: <%= render :partial => 'footer'%>
+
+    app/views/tickets/index.html.erb:25
+    app/controllers/tickets_controller.rb:7:in `index'
+
+Rendered rescues/_trace (37.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-19 17:49:37) [GET]
+  [4;36;1mTicket Load (0.9ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+
+ActionView::TemplateError (Missing template tickets/_footer.erb in view path app/views) on line #25 of app/views/tickets/index.html.erb:
+22: <%= link_to 'New ticket', new_ticket_path %>
+23: 
+24: 
+25: <%= render :partial => 'footer'%>
+
+    app/views/tickets/index.html.erb:25
+    app/controllers/tickets_controller.rb:7:in `index'
+
+Rendered rescues/_trace (105.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:49:44) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:49:45) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:49:53) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-19 17:49:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-19 17:49:59) [GET]
+  [4;35;1mTicket Load (1.1ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+
+ActionView::TemplateError (Missing template tickets/_footer.erb in view path app/views) on line #25 of app/views/tickets/index.html.erb:
+22: <%= link_to 'New ticket', new_ticket_path %>
+23: 
+24: 
+25: <%= render :partial => 'footer'%>
+
+    app/views/tickets/index.html.erb:25
+    app/controllers/tickets_controller.rb:7:in `index'
+
+Rendered rescues/_trace (34.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-19 17:50:37) [GET]
+  [4;36;1mTicket Load (0.6ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+
+ActionView::TemplateError (Missing template tickets/_footer.erb in view path app/views) on line #25 of app/views/tickets/index.html.erb:
+22: <%= link_to 'New ticket', new_ticket_path %>
+23: 
+24: 
+25: <%= render :partial => 'footer'%>
+
+    app/views/tickets/index.html.erb:25
+    app/controllers/tickets_controller.rb:7:in `index'
+
+Rendered rescues/_trace (36.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-19 17:50:38) [GET]
+  [4;35;1mTicket Load (1.3ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+
+ActionView::TemplateError (Missing template tickets/_footer.erb in view path app/views) on line #25 of app/views/tickets/index.html.erb:
+22: <%= link_to 'New ticket', new_ticket_path %>
+23: 
+24: 
+25: <%= render :partial => 'footer'%>
+
+    app/views/tickets/index.html.erb:25
+    app/controllers/tickets_controller.rb:7:in `index'
+
+Rendered rescues/_trace (101.9ms)
+Rendered rescues/_request_and_response (0.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-19 17:50:38) [GET]
+  [4;36;1mTicket Load (1.4ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+
+ActionView::TemplateError (Missing template tickets/_footer.erb in view path app/views) on line #25 of app/views/tickets/index.html.erb:
+22: <%= link_to 'New ticket', new_ticket_path %>
+23: 
+24: 
+25: <%= render :partial => 'footer'%>
+
+    app/views/tickets/index.html.erb:25
+    app/controllers/tickets_controller.rb:7:in `index'
+
+Rendered rescues/_trace (39.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-19 17:50:44) [GET]
+  [4;35;1mTicket Load (0.7ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+
+ActionView::TemplateError (Missing template tickets/_footer.erb in view path app/views) on line #25 of app/views/tickets/index.html.erb:
+22: <%= link_to 'New ticket', new_ticket_path %>
+23: 
+24: 
+25: <%= render :partial => 'footer'%>
+
+    app/views/tickets/index.html.erb:25
+    app/controllers/tickets_controller.rb:7:in `index'
+
+Rendered rescues/_trace (35.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:50:47) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.5ms)
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-19 17:50:47) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:50:48) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-19 17:50:48) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 17:55:03) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-19 17:55:03) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 17:55:09) [POST]
+  Parameters: {"ticket"=>{"number"=>"1235", "code"=>"fob7"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;36;1mTicket Create (0.3ms)[0m   [0;1mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(1235, '2010-09-19 21:55:09', 'fob7', '2010-09-19 21:55:09')[0m
+Redirected to http://localhost:3000/participant/new
+
+NoMethodError (undefined method `call' for nil:NilClass):
+  app/controllers/tickets_controller.rb:45:in `create'
+
+Rendered rescues/_trace (27.5ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 17:56:06) [POST]
+  Parameters: {"ticket"=>{"number"=>"1235", "code"=>"fob7"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;35;1mTicket Create (0.3ms)[0m   [0mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(1235, '2010-09-19 21:56:06', 'fob7', '2010-09-19 21:56:06')[0m
+Redirected to http://localhost:3000/participant/new
+
+ActionController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  app/controllers/tickets_controller.rb:48:in `create'
+  app/controllers/tickets_controller.rb:45:in `create'
+
+Rendered rescues/_trace (31.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 17:56:40) [POST]
+  Parameters: {"ticket"=>{"number"=>"1235", "code"=>"fob7"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;36;1mTicket Create (0.4ms)[0m   [0;1mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(1235, '2010-09-19 21:56:40', 'fob7', '2010-09-19 21:56:40')[0m
+Redirected to http://localhost:3000/participant/new
+
+NoMethodError (undefined method `call' for nil:NilClass):
+  app/controllers/tickets_controller.rb:45:in `create'
+
+Rendered rescues/_trace (33.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 17:57:13) [POST]
+  Parameters: {"ticket"=>{"number"=>"1235", "code"=>"fob7"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;35;1mTicket Create (0.6ms)[0m   [0mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(1235, '2010-09-19 21:57:13', 'fob7', '2010-09-19 21:57:13')[0m
+Redirected to http://localhost:3000/participant/new
+
+NoMethodError (undefined method `call' for nil:NilClass):
+  app/controllers/tickets_controller.rb:45:in `create'
+
+Rendered rescues/_trace (32.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 17:57:17) [POST]
+  Parameters: {"ticket"=>{"number"=>"1235", "code"=>"fob7"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;36;1mTicket Create (0.4ms)[0m   [0;1mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(1235, '2010-09-19 21:57:17', 'fob7', '2010-09-19 21:57:17')[0m
+Redirected to http://localhost:3000/participant/new
+
+NoMethodError (undefined method `call' for nil:NilClass):
+  app/controllers/tickets_controller.rb:45:in `create'
+
+Rendered rescues/_trace (28.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 18:02:51) [POST]
+  Parameters: {"ticket"=>{"number"=>"1239", "code"=>"fob7"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;35;1mTicket Create (0.4ms)[0m   [0mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(1239, '2010-09-19 22:02:51', 'fob7', '2010-09-19 22:02:51')[0m
+Redirected to http://localhost:3000/participant/new
+
+NoMethodError (undefined method `call' for nil:NilClass):
+  app/controllers/tickets_controller.rb:45:in `create'
+
+Rendered rescues/_trace (26.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 18:09:23) [POST]
+  Parameters: {"ticket"=>{"number"=>"1239", "code"=>"fob7"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;36;1mTicket Create (0.4ms)[0m   [0;1mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(1239, '2010-09-19 22:09:23', 'fob7', '2010-09-19 22:09:23')[0m
+Redirected to http://localhost:3000/participants/new
+
+NoMethodError (undefined method `call' for nil:NilClass):
+  app/controllers/tickets_controller.rb:45:in `create'
+
+Rendered rescues/_trace (36.2ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 18:12:24) [POST]
+  Parameters: {"ticket"=>{"number"=>"1239", "code"=>"fob7"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;35;1mTicket Create (0.6ms)[0m   [0mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(1239, '2010-09-19 22:12:24', 'fob7', '2010-09-19 22:12:24')[0m
+Redirected to http://localhost:3000/participants/new
+
+NoMethodError (undefined method `call' for nil:NilClass):
+  app/controllers/tickets_controller.rb:45:in `create'
+
+Rendered rescues/_trace (29.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 18:12:32) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-19 18:12:32) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-19 18:12:37) [GET]
+  [4;36;1mTicket Load (1.0ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+
+ActionView::TemplateError (Missing template tickets/_footer.erb in view path app/views) on line #25 of app/views/tickets/index.html.erb:
+22: <%= link_to 'New ticket', new_ticket_path %>
+23: 
+24: 
+25: <%= render :partial => 'footer'%>
+
+    app/views/tickets/index.html.erb:25
+    app/controllers/tickets_controller.rb:7:in `index'
+
+Rendered rescues/_trace (34.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-19 18:12:59) [GET]
+  [4;35;1mTicket Load (1.0ms)[0m   [0mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 37ms (View: 32, DB: 1) | 200 OK [http://localhost/tickets]
+
+
+Processing TicketsController#destroy (for 127.0.0.1 at 2010-09-19 18:13:05) [DELETE]
+  Parameters: {"authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk=", "id"=>"8"}
+  [4;36;1mTicket Load (0.2ms)[0m   [0;1mSELECT * FROM "tickets" WHERE ("tickets"."id" = 8) [0m
+  [4;35;1mTicket Destroy (0.3ms)[0m   [0mDELETE FROM "tickets" WHERE "id" = 8[0m
+Redirected to http://localhost:3000/tickets
+Completed in 11ms (DB: 1) | 302 Found [http://localhost/tickets/8]
+
+
+Processing TicketsController#index (for 127.0.0.1 at 2010-09-19 18:13:05) [GET]
+  [4;36;1mTicket Load (0.9ms)[0m   [0;1mSELECT * FROM "tickets" [0m
+Rendering template within layouts/tickets
+Rendering tickets/index
+Completed in 93ms (View: 87, DB: 1) | 200 OK [http://localhost/tickets]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 18:13:08) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 11ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-19 18:13:08) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 18:13:14) [POST]
+  Parameters: {"ticket"=>{"number"=>"314", "code"=>"7bw"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;35;1mTicket Create (0.3ms)[0m   [0mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(314, '2010-09-19 22:13:14', '7bw', '2010-09-19 22:13:14')[0m
+Redirected to http://localhost:3000/participants/new
+
+NoMethodError (undefined method `call' for nil:NilClass):
+  app/controllers/tickets_controller.rb:45:in `create'
+
+Rendered rescues/_trace (24.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 18:14:03) [POST]
+  Parameters: {"ticket"=>{"number"=>"314", "code"=>"7bw"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;36;1mTicket Create (0.5ms)[0m   [0;1mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(314, '2010-09-19 22:14:03', '7bw', '2010-09-19 22:14:03')[0m
+Redirected to http://localhost:3000/participants/new
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/tickets]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-19 18:14:03) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 58ms (View: 19, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 18:17:21) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.2ms)
+Completed in 13ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-19 18:17:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 18:17:29) [POST]
+  Parameters: {"ticket"=>{"number"=>"412", "code"=>"8jv"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;35;1mTicket Create (0.6ms)[0m   [0mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(412, '2010-09-19 22:17:29', '8jv', '2010-09-19 22:17:29')[0m
+Redirected to http://localhost:3000/participants/new
+Completed in 10ms (DB: 1) | 302 Found [http://localhost/tickets]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-19 18:17:29) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Completed in 14ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-19 18:18:14) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (54.4ms)
+Completed in 75ms (View: 69, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-19 18:18:14) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 19:35:44) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 73ms (View: 68, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-19 19:35:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 19:36:04) [POST]
+  Parameters: {"ticket"=>{"number"=>"743", "code"=>"sos7v"}, "commit"=>"Submit", "authenticity_token"=>"wSXDopRP9gWacm4/QIDfwVXm4X8C+D1YwL+DYjUFOPk="}
+  [4;36;1mTicket Create (19.7ms)[0m   [0;1mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(743, '2010-09-19 23:36:04', 'sos7v', '2010-09-19 23:36:04')[0m
+Redirected to http://localhost:3000/participants/new
+Completed in 45ms (DB: 20) | 302 Found [http://localhost/tickets]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-19 19:36:04) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-19 19:36:04) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 20:58:55) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (1.7ms)
+Completed in 44ms (View: 22, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-19 20:58:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 20:59:09) [POST]
+  Parameters: {"ticket"=>{"number"=>"123", "code"=>"46v"}, "commit"=>"Submit", "authenticity_token"=>"A86KA4ezOtFNylSI6Hn7XtSuQl68zw1SHeH5c/pq+ww="}
+  [4;36;1mTicket Create (0.4ms)[0m   [0;1mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(123, '2010-09-20 00:59:09', '46v', '2010-09-20 00:59:09')[0m
+Redirected to http://localhost:3000/participants/new
+Completed in 9ms (DB: 0) | 302 Found [http://localhost/tickets]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-19 20:59:09) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 28ms (View: 21, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-19 20:59:09) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-19 20:59:24) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"j;", "address"=>"llaskjdl", "zip"=>";lkj", "address2"=>"j;l", "lastName"=>"gla", "ranking"=>"Pool", "firstName"=>"Garret", "subscribe"=>"0", "ranking2"=>"Ping-Pong", "email"=>";lkj", "state"=>"lkj"}, "commit"=>"Submit", "authenticity_token"=>"A86KA4ezOtFNylSI6Hn7XtSuQl68zw1SHeH5c/pq+ww="}
+  [4;35;1mParticipant Create (0.3ms)[0m   [0mINSERT INTO "participants" ("address", "city", "ranking3", "lastName", "zip", "created_at", "address2", "ranking", "updated_at", "attend", "firstName", "phone", "subscribe", "ticketId", "email", "ranking2", "state") VALUES('llaskjdl', 'j;', 'Poker', 'gla', 0, '2010-09-20 00:59:24', 'j;l', 'Pool', '2010-09-20 00:59:24', NULL, 'Garret', NULL, '0', NULL, ';lkj', 'Ping-Pong', 'lkj')[0m
+Redirected to http://localhost:3000/participants/11
+Completed in 12ms (DB: 0) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-19 20:59:24) [GET]
+  Parameters: {"id"=>"11"}
+  [4;36;1mParticipant Load (0.3ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 11) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.2ms)
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/participants/11]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-19 20:59:24) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)

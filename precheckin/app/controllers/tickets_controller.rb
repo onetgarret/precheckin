@@ -44,8 +44,8 @@ class TicketsController < ApplicationController
 
     respond_to do |format|
       if @ticket.save
-        # format.html { redirect_to(@ticket, :notice => 'Ticket was successfully created.') }
-        format.html { redirect_to(@ticket, :notice => 'Ticket was successfully created.') }
+      
+        format.html { redirect_to :controller => '/participants', :action => 'new' }
         format.xml  { render :xml => @ticket, :status => :created, :location => @ticket }
       else
         format.html { render :action => "new" }
