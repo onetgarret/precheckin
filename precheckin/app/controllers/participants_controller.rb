@@ -53,6 +53,11 @@ class ParticipantsController < ApplicationController
     end
   end
 
+
+
+  def confimation
+    
+  end
   # PUT /participants/1
   # PUT /participants/1.xml
   def update

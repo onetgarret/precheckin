@@ -4070,14 +4070,14 @@ ActionController::UnknownAction (No action responded to images. Actions: create,
 Rendering rescues/layout (not_found)
 
 
-Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 20:58:55) [GET]
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 22:24:01) [GET]
 Rendering template within layouts/tickets
 Rendering tickets/new
-Rendered partials/_footer (1.7ms)
-Completed in 44ms (View: 22, DB: 0) | 200 OK [http://localhost/]
+Rendered partials/_footer (1.6ms)
+Completed in 51ms (View: 29, DB: 0) | 200 OK [http://localhost/]
 
 
-Processing ApplicationController#index (for 127.0.0.1 at 2010-09-19 20:58:55) [GET]
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-19 22:24:02) [GET]
 
 ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
   
@@ -4085,21 +4085,21 @@ ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with 
 Rendering rescues/layout (not_found)
 
 
-Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 20:59:09) [POST]
-  Parameters: {"ticket"=>{"number"=>"123", "code"=>"46v"}, "commit"=>"Submit", "authenticity_token"=>"A86KA4ezOtFNylSI6Hn7XtSuQl68zw1SHeH5c/pq+ww="}
-  [4;36;1mTicket Create (0.4ms)[0m   [0;1mINSERT INTO "tickets" ("number", "created_at", "code", "updated_at") VALUES(123, '2010-09-20 00:59:09', '46v', '2010-09-20 00:59:09')[0m
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 22:24:04) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;36;1mTicket Create (0.4ms)[0m   [0;1mINSERT INTO "tickets" ("updated_at", "number", "code", "created_at") VALUES('2010-09-20 02:24:04', NULL, '', '2010-09-20 02:24:04')[0m
 Redirected to http://localhost:3000/participants/new
-Completed in 9ms (DB: 0) | 302 Found [http://localhost/tickets]
+Completed in 13ms (DB: 0) | 302 Found [http://localhost/tickets]
 
 
-Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-19 20:59:09) [GET]
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-19 22:24:04) [GET]
 Rendering template within layouts/participants
 Rendering participants/new
 Rendered partials/_footer (0.3ms)
-Completed in 28ms (View: 21, DB: 0) | 200 OK [http://localhost/participants/new]
+Completed in 51ms (View: 24, DB: 0) | 200 OK [http://localhost/participants/new]
 
 
-Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-19 20:59:09) [GET]
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-19 22:24:04) [GET]
   Parameters: {"id"=>"zebraevents"}
 
 ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
@@ -4108,26 +4108,2666 @@ ActionController::UnknownAction (No action responded to images. Actions: create,
 Rendering rescues/layout (not_found)
 
 
-Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-19 20:59:24) [POST]
-  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"j;", "address"=>"llaskjdl", "zip"=>";lkj", "address2"=>"j;l", "lastName"=>"gla", "ranking"=>"Pool", "firstName"=>"Garret", "subscribe"=>"0", "ranking2"=>"Ping-Pong", "email"=>";lkj", "state"=>"lkj"}, "commit"=>"Submit", "authenticity_token"=>"A86KA4ezOtFNylSI6Hn7XtSuQl68zw1SHeH5c/pq+ww="}
-  [4;35;1mParticipant Create (0.3ms)[0m   [0mINSERT INTO "participants" ("address", "city", "ranking3", "lastName", "zip", "created_at", "address2", "ranking", "updated_at", "attend", "firstName", "phone", "subscribe", "ticketId", "email", "ranking2", "state") VALUES('llaskjdl', 'j;', 'Poker', 'gla', 0, '2010-09-20 00:59:24', 'j;l', 'Pool', '2010-09-20 00:59:24', NULL, 'Garret', NULL, '0', NULL, ';lkj', 'Ping-Pong', 'lkj')[0m
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-19 22:24:06) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Pool", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Pool", "subscribe"=>"0", "email"=>"", "state"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mParticipant Create (0.4ms)[0m   [0mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "email", "created_at", "ranking2", "subscribe", "state") VALUES('', 'Pool', '', NULL, '2010-09-20 02:24:06', '', 'Pool', NULL, '', NULL, NULL, '', '', '2010-09-20 02:24:06', 'Pool', '0', '')[0m
 Redirected to http://localhost:3000/participants/11
-Completed in 12ms (DB: 0) | 302 Found [http://localhost/participants]
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/participants]
 
 
-Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-19 20:59:24) [GET]
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-19 22:24:06) [GET]
   Parameters: {"id"=>"11"}
-  [4;36;1mParticipant Load (0.3ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 11) [0m
+  [4;36;1mParticipant Load (0.4ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 11) [0m
 Rendering template within layouts/participants
 Rendering participants/show
-Rendered partials/_footer (0.2ms)
-Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/participants/11]
+Rendered partials/_footer (0.3ms)
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://localhost/participants/11]
 
 
-Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-19 20:59:24) [GET]
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-19 22:24:06) [GET]
   Parameters: {"id"=>"zebraevents"}
 
 ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 22:27:38) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-19 22:27:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 22:27:40) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mTicket Create (0.4ms)[0m   [0mINSERT INTO "tickets" ("updated_at", "number", "code", "created_at") VALUES('2010-09-20 02:27:40', NULL, '', '2010-09-20 02:27:40')[0m
+Redirected to http://localhost:3000/participants/new
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/tickets]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-19 22:27:40) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-19 22:27:40) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-19 22:27:42) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Pool", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Pool", "subscribe"=>"0", "email"=>"", "state"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;36;1mParticipant Create (0.4ms)[0m   [0;1mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "email", "created_at", "ranking2", "subscribe", "state") VALUES('', 'Pool', '', NULL, '2010-09-20 02:27:42', '', 'Pool', NULL, '', NULL, NULL, '', '', '2010-09-20 02:27:42', 'Pool', '0', '')[0m
+Redirected to http://localhost:3000/participants/12
+Completed in 14ms (DB: 0) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-19 22:27:42) [GET]
+  Parameters: {"id"=>"12"}
+  [4;35;1mParticipant Load (0.5ms)[0m   [0mSELECT * FROM "participants" WHERE ("participants"."id" = 12) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/participants/12]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-19 22:27:42) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 22:28:07) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 77ms (View: 72, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-19 22:28:07) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 22:28:09) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;36;1mTicket Create (0.4ms)[0m   [0;1mINSERT INTO "tickets" ("updated_at", "number", "code", "created_at") VALUES('2010-09-20 02:28:09', NULL, '', '2010-09-20 02:28:09')[0m
+Redirected to http://localhost:3000/participants/new
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/tickets]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-19 22:28:09) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-19 22:28:09) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-19 22:28:12) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Pool", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Pool", "subscribe"=>"0", "email"=>"", "state"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mParticipant Create (0.3ms)[0m   [0mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "email", "created_at", "ranking2", "subscribe", "state") VALUES('', 'Pool', '', NULL, '2010-09-20 02:28:12', '', 'Pool', NULL, '', NULL, NULL, '', '', '2010-09-20 02:28:12', 'Pool', '0', '')[0m
+Redirected to http://localhost:3000/participants/13
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-19 22:28:12) [GET]
+  Parameters: {"id"=>"13"}
+  [4;36;1mParticipant Load (0.4ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 13) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/participants/13]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-19 22:28:12) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-19 22:31:18) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.4ms)
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-19 22:31:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-19 22:31:20) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mTicket Create (0.4ms)[0m   [0mINSERT INTO "tickets" ("updated_at", "number", "code", "created_at") VALUES('2010-09-20 02:31:20', NULL, '', '2010-09-20 02:31:20')[0m
+Redirected to http://localhost:3000/participants/new
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/tickets]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-19 22:31:20) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 12, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-19 22:31:20) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-19 22:31:22) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Pool", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Pool", "subscribe"=>"0", "email"=>"", "state"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;36;1mParticipant Create (0.4ms)[0m   [0;1mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "email", "created_at", "ranking2", "subscribe", "state") VALUES('', 'Pool', '', NULL, '2010-09-20 02:31:22', '', 'Pool', NULL, '', NULL, NULL, '', '', '2010-09-20 02:31:22', 'Pool', '0', '')[0m
+Redirected to http://localhost:3000/participants/14
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-19 22:31:22) [GET]
+  Parameters: {"id"=>"14"}
+  [4;35;1mParticipant Load (0.4ms)[0m   [0mSELECT * FROM "participants" WHERE ("participants"."id" = 14) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/participants/14]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-19 22:31:22) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 01:03:42) [GET]
+  Parameters: {"id"=>"14"}
+  [4;36;1mParticipant Load (0.4ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 14) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/participants/14]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 01:03:42) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-20 01:03:53) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.4ms)
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:03:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:03:54) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:03:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:04:40) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 106ms (View: 97, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:04:41) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-20 01:04:44) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:04:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:04:46) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:04:46) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:12:55) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 27ms (View: 18, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:12:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:13:33) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 32ms (View: 23, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:13:33) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:13:40) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 109ms (View: 101, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:13:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:17:05) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (4.9ms)
+Completed in 31ms (View: 23, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:17:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:17:40) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 29ms (View: 21, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:17:40) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:17:55) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 27ms (View: 19, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:17:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:19:16) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.4ms)
+Completed in 97ms (View: 23, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:19:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:19:18) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 22ms (View: 13, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:19:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:20:38) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 26ms (View: 18, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:20:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-20 01:20:54) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 16ms (View: 10, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:20:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:21:00) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.4ms)
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:21:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:21:43) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 104ms (View: 96, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:21:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:22:15) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.4ms)
+Completed in 29ms (View: 21, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:22:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-20 01:22:20) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:22:20) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-20 01:23:09) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:23:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-20 01:23:43) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:23:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-20 01:23:50) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 84ms (View: 79, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:23:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-20 01:24:04) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:24:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-20 01:24:53) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 20ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:24:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-20 01:25:02) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:25:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-20 01:25:15) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 17ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:25:15) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-20 01:25:31) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 19ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:25:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-20 01:25:45) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 21ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:25:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-20 01:25:56) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.5ms)
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:25:56) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:26:26) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 20ms (View: 12, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:26:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:26:36) [POST]
+  Parameters: {"ticket"=>{"code"=>"546", "number"=>"345"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mTicket Create (0.4ms)[0m   [0mINSERT INTO "tickets" ("updated_at", "number", "code", "created_at") VALUES('2010-09-20 05:26:36', 345, '546', '2010-09-20 05:26:36')[0m
+Redirected to http://localhost:3000/participants/new
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/tickets]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-20 01:26:36) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 11, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 01:26:37) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:27:38) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 22ms (View: 13, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:27:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:29:36) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.5ms)
+Completed in 22ms (View: 14, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:29:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:30:05) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 27ms (View: 20, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:30:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:30:23) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 22ms (View: 13, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:30:23) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:31:05) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 98ms (View: 90, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:31:05) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:31:16) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 22ms (View: 13, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:31:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:31:34) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 22ms (View: 12, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:31:34) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:31:48) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 22ms (View: 13, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:31:48) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:32:01) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:32:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:32:24) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 91ms (View: 11, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:32:24) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:32:48) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:32:48) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:32:57) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 34ms (View: 19, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:32:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:33:10) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 30ms (View: 19, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:33:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:33:31) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.4ms)
+Completed in 22ms (View: 14, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:33:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:33:57) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 20ms (View: 11, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:33:57) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:34:18) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 31ms (View: 22, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:34:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:34:31) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 27ms (View: 16, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:34:31) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:34:44) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (2.4ms)
+Completed in 30ms (View: 21, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:34:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:35:04) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 21ms (View: 13, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:35:04) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:35:17) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 23ms (View: 14, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:35:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:35:30) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 22ms (View: 13, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:35:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:35:44) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 23ms (View: 15, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:35:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:35:59) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 24ms (View: 15, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:36:00) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:36:09) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 22ms (View: 14, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:36:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:36:25) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.4ms)
+Completed in 33ms (View: 19, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:36:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:36:58) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 40ms (View: 29, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:36:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:37:26) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 44ms (View: 30, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:37:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:37:36) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.5ms)
+Completed in 28ms (View: 19, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:37:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:38:01) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 25ms (View: 18, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:38:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:38:12) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.5ms)
+Completed in 27ms (View: 19, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:38:12) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:38:21) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 31ms (View: 22, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:38:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:38:29) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 30ms (View: 21, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:38:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:38:36) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 99ms (View: 17, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:38:36) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:39:11) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 28ms (View: 19, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:39:11) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:39:30) [POST]
+  Parameters: {"ticket"=>{"code"=>"", "number"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 27ms (View: 19, DB: 0) | 200 OK [http://localhost/tickets]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:39:30) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 01:39:42) [POST]
+  Parameters: {"ticket"=>{"code"=>"546", "number"=>"345"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;36;1mTicket Create (0.4ms)[0m   [0;1mINSERT INTO "tickets" ("updated_at", "number", "code", "created_at") VALUES('2010-09-20 05:39:42', 345, '546', '2010-09-20 05:39:42')[0m
+Redirected to http://localhost:3000/participants/new
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/tickets]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-20 01:39:42) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 26ms (View: 19, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 01:39:42) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-20 01:44:34) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 01:44:34) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-20 01:46:17) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 19ms (View: 12, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 01:46:17) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-20 01:46:50) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 26ms (View: 19, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 01:46:50) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 01:47:49) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Pool", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Pool", "subscribe"=>"0", "email"=>"", "state"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 45ms (View: 34, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:47:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 01:48:58) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Pool", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Pool", "subscribe"=>"0", "email"=>"", "state"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 33ms (View: 22, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 01:48:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 02:35:49) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Pool", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Pool", "subscribe"=>"0", "email"=>"", "state"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 32ms (View: 21, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 02:35:49) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 11:41:26) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Pool", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Pool", "subscribe"=>"0", "email"=>"", "state"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 63ms (View: 50, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 11:41:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 11:42:37) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Pool", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Pool", "subscribe"=>"0", "email"=>"", "state"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 111ms (View: 95, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 11:42:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 11:43:29) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Pool", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Pool", "subscribe"=>"0", "email"=>"", "state"=>""}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 39ms (View: 26, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 11:43:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 11:44:28) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 11:45:44) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Ping-Pong", "subscribe"=>"0", "email"=>"", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 36ms (View: 26, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 11:45:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 11:46:21) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"Pittsburgh", "zip"=>"15289", "address2"=>"", "lastName"=>"Kumar", "ranking"=>"Pool", "firstName"=>"Spoorthi", "address"=>"SMC 5801, Carnegie mellon university", "ranking2"=>"Ping-Pong", "subscribe"=>"1", "email"=>"spoorthi.kumar@gmail.com", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 24ms (View: 13, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 11:46:21) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 11:46:45) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"Pittsburgh", "zip"=>"15289", "address2"=>"", "lastName"=>"Kumar", "ranking"=>"Pool", "firstName"=>"Spoorthi", "address"=>"SMC 5801, Carnegie mellon university", "ranking2"=>"Ping-Pong", "subscribe"=>"1", "email"=>"spoorthi.kumar@gmail.com", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 97ms (View: 12, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 11:46:45) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 11:48:07) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"Pittsburgh", "zip"=>"15289", "address2"=>"", "lastName"=>"Kumar", "ranking"=>"Pool", "firstName"=>"Spoorthi", "address"=>"SMC 5801, Carnegie mellon university", "ranking2"=>"Ping-Pong", "subscribe"=>"1", "email"=>"spoorthi.kumar@gmail.com", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mParticipant Create (0.4ms)[0m   [0mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "email", "created_at", "ranking2", "subscribe", "state") VALUES('Pittsburgh', 'Poker', 'Kumar', 15289, '2010-09-20 15:48:07', '', 'Pool', NULL, 'Spoorthi', NULL, NULL, 'SMC 5801, Carnegie mellon university', 'spoorthi.kumar@gmail.com', '2010-09-20 15:48:07', 'Ping-Pong', '1', 'PA')[0m
+Redirected to http://localhost:3000/participants/15
+Completed in 18ms (DB: 0) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 11:48:07) [GET]
+  Parameters: {"id"=>"15"}
+  [4;36;1mParticipant Load (0.4ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 15) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 12ms (View: 5, DB: 0) | 200 OK [http://localhost/participants/15]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 11:48:07) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 11:54:02) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"Pittsburgh", "zip"=>"15289", "address2"=>"", "lastName"=>"Kumar", "ranking"=>"Pool", "firstName"=>"Spoorthi", "address"=>"SMC 5801, Carnegie mellon university", "ranking2"=>"Ping-Pong", "subscribe"=>"1", "email"=>"spoorthi.kumar@gmail.com", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mParticipant Create (0.4ms)[0m   [0mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "email", "created_at", "ranking2", "subscribe", "state") VALUES('Pittsburgh', 'Poker', 'Kumar', 15289, '2010-09-20 15:54:02', '', 'Pool', NULL, 'Spoorthi', NULL, NULL, 'SMC 5801, Carnegie mellon university', 'spoorthi.kumar@gmail.com', '2010-09-20 15:54:02', 'Ping-Pong', '1', 'PA')[0m
+Redirected to http://localhost:3000/participants/16
+Completed in 18ms (DB: 0) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 11:54:02) [GET]
+  Parameters: {"id"=>"16"}
+  [4;36;1mParticipant Load (0.5ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 16) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/16]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 11:54:02) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 11:54:38) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"Pittsburgh", "zip"=>"15289", "address2"=>"", "lastName"=>"Kumar", "ranking"=>"Pool", "firstName"=>"Spoorthi", "address"=>"SMC 5801, Carnegie mellon university", "ranking2"=>"Ping-Pong", "subscribe"=>"1", "email"=>"spoorthi.kumar@gmail.com", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mParticipant Create (0.7ms)[0m   [0mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "email", "created_at", "ranking2", "subscribe", "state") VALUES('Pittsburgh', 'Poker', 'Kumar', 15289, '2010-09-20 15:54:38', '', 'Pool', NULL, 'Spoorthi', NULL, NULL, 'SMC 5801, Carnegie mellon university', 'spoorthi.kumar@gmail.com', '2010-09-20 15:54:38', 'Ping-Pong', '1', 'PA')[0m
+Redirected to http://localhost:3000/participants/17
+Completed in 18ms (DB: 1) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 11:54:38) [GET]
+  Parameters: {"id"=>"17"}
+  [4;36;1mParticipant Load (0.4ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 17) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/17]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 11:54:38) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 11:54:58) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"Pittsburgh", "zip"=>"15289", "address2"=>"", "lastName"=>"Kumar", "ranking"=>"Pool", "firstName"=>"Spoorthi", "address"=>"SMC 5801, Carnegie mellon university", "ranking2"=>"Ping-Pong", "subscribe"=>"1", "email"=>"spoorthi.kumar@gmail.com", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mParticipant Create (0.4ms)[0m   [0mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "email", "created_at", "ranking2", "subscribe", "state") VALUES('Pittsburgh', 'Poker', 'Kumar', 15289, '2010-09-20 15:54:58', '', 'Pool', NULL, 'Spoorthi', NULL, NULL, 'SMC 5801, Carnegie mellon university', 'spoorthi.kumar@gmail.com', '2010-09-20 15:54:58', 'Ping-Pong', '1', 'PA')[0m
+Redirected to http://localhost:3000/participants/18
+Completed in 19ms (DB: 0) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 11:54:58) [GET]
+  Parameters: {"id"=>"18"}
+  [4;36;1mParticipant Load (0.4ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 18) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/18]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 11:54:58) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 11:55:23) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"Pittsburgh", "zip"=>"15289", "address2"=>"", "lastName"=>"Kumar", "ranking"=>"Pool", "firstName"=>"Spoorthi", "address"=>"SMC 5801, Carnegie mellon university", "ranking2"=>"Ping-Pong", "subscribe"=>"1", "email"=>"spoorthi.kumar@gmail.com", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mParticipant Create (0.4ms)[0m   [0mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "email", "created_at", "ranking2", "subscribe", "state") VALUES('Pittsburgh', 'Poker', 'Kumar', 15289, '2010-09-20 15:55:23', '', 'Pool', NULL, 'Spoorthi', NULL, NULL, 'SMC 5801, Carnegie mellon university', 'spoorthi.kumar@gmail.com', '2010-09-20 15:55:23', 'Ping-Pong', '1', 'PA')[0m
+Redirected to http://localhost:3000/participants/19
+Completed in 18ms (DB: 0) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 11:55:23) [GET]
+  Parameters: {"id"=>"19"}
+  [4;36;1mParticipant Load (0.6ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 19) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/participants/19]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 11:55:23) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 11:55:45) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"Pittsburgh", "zip"=>"15289", "address2"=>"", "lastName"=>"Kumar", "ranking"=>"Pool", "firstName"=>"Spoorthi", "address"=>"SMC 5801, Carnegie mellon university", "ranking2"=>"Ping-Pong", "subscribe"=>"1", "email"=>"spoorthi.kumar@gmail.com", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mParticipant Create (0.4ms)[0m   [0mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "email", "created_at", "ranking2", "subscribe", "state") VALUES('Pittsburgh', 'Poker', 'Kumar', 15289, '2010-09-20 15:55:45', '', 'Pool', NULL, 'Spoorthi', NULL, NULL, 'SMC 5801, Carnegie mellon university', 'spoorthi.kumar@gmail.com', '2010-09-20 15:55:45', 'Ping-Pong', '1', 'PA')[0m
+Redirected to http://localhost:3000/participants/20
+Completed in 18ms (DB: 0) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 11:55:45) [GET]
+  Parameters: {"id"=>"20"}
+  [4;36;1mParticipant Load (0.7ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 20) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/participants/20]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 11:55:45) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 11:55:47) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"Pittsburgh", "zip"=>"15289", "address2"=>"", "lastName"=>"Kumar", "ranking"=>"Pool", "firstName"=>"Spoorthi", "address"=>"SMC 5801, Carnegie mellon university", "ranking2"=>"Ping-Pong", "subscribe"=>"1", "email"=>"spoorthi.kumar@gmail.com", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mParticipant Create (0.4ms)[0m   [0mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "email", "created_at", "ranking2", "subscribe", "state") VALUES('Pittsburgh', 'Poker', 'Kumar', 15289, '2010-09-20 15:55:47', '', 'Pool', NULL, 'Spoorthi', NULL, NULL, 'SMC 5801, Carnegie mellon university', 'spoorthi.kumar@gmail.com', '2010-09-20 15:55:47', 'Ping-Pong', '1', 'PA')[0m
+Redirected to http://localhost:3000/participants/21
+Completed in 18ms (DB: 0) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 11:55:47) [GET]
+  Parameters: {"id"=>"21"}
+  [4;36;1mParticipant Load (0.4ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 21) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 13ms (View: 4, DB: 0) | 200 OK [http://localhost/participants/21]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 11:55:47) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 11:56:45) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"Pittsburgh", "zip"=>"15289", "address2"=>"", "lastName"=>"Kumar", "ranking"=>"Pool", "firstName"=>"Spoorthi", "address"=>"SMC 5801, Carnegie mellon university", "ranking2"=>"Ping-Pong", "subscribe"=>"1", "email"=>"spoorthi.kumar@gmail.com", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mParticipant Create (0.5ms)[0m   [0mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "email", "created_at", "ranking2", "subscribe", "state") VALUES('Pittsburgh', 'Poker', 'Kumar', 15289, '2010-09-20 15:56:45', '', 'Pool', NULL, 'Spoorthi', NULL, NULL, 'SMC 5801, Carnegie mellon university', 'spoorthi.kumar@gmail.com', '2010-09-20 15:56:45', 'Ping-Pong', '1', 'PA')[0m
+Redirected to http://localhost:3000/participants/22
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 11:56:45) [GET]
+  Parameters: {"id"=>"22"}
+  [4;36;1mParticipant Load (0.5ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 22) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/22]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 11:56:45) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 11:56:47) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"Pittsburgh", "zip"=>"15289", "address2"=>"", "lastName"=>"Kumar", "ranking"=>"Pool", "firstName"=>"Spoorthi", "address"=>"SMC 5801, Carnegie mellon university", "ranking2"=>"Ping-Pong", "subscribe"=>"1", "email"=>"spoorthi.kumar@gmail.com", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mParticipant Create (0.4ms)[0m   [0mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "email", "created_at", "ranking2", "subscribe", "state") VALUES('Pittsburgh', 'Poker', 'Kumar', 15289, '2010-09-20 15:56:47', '', 'Pool', NULL, 'Spoorthi', NULL, NULL, 'SMC 5801, Carnegie mellon university', 'spoorthi.kumar@gmail.com', '2010-09-20 15:56:47', 'Ping-Pong', '1', 'PA')[0m
+Redirected to http://localhost:3000/participants/23
+Completed in 30ms (DB: 0) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 11:56:47) [GET]
+  Parameters: {"id"=>"23"}
+  [4;36;1mParticipant Load (0.5ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 23) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/participants/23]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 11:56:47) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 11:57:00) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"Pittsburgh", "zip"=>"15289", "address2"=>"", "lastName"=>"Kumar", "ranking"=>"Pool", "firstName"=>"Spoorthi", "address"=>"SMC 5801, Carnegie mellon university", "ranking2"=>"Ping-Pong", "subscribe"=>"1", "email"=>"spoorthi.kumar@gmail.com", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mParticipant Create (0.5ms)[0m   [0mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "email", "created_at", "ranking2", "subscribe", "state") VALUES('Pittsburgh', 'Poker', 'Kumar', 15289, '2010-09-20 15:57:00', '', 'Pool', NULL, 'Spoorthi', NULL, NULL, 'SMC 5801, Carnegie mellon university', 'spoorthi.kumar@gmail.com', '2010-09-20 15:57:00', 'Ping-Pong', '1', 'PA')[0m
+Redirected to http://localhost:3000/participants/24
+Completed in 18ms (DB: 1) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 11:57:01) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mParticipant Load (0.4ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 24) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/24]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 11:57:01) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 11:59:59) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"Pittsburgh", "zip"=>"15289", "address2"=>"", "lastName"=>"Kumar", "ranking"=>"Pool", "firstName"=>"Spoorthi", "address"=>"SMC 5801, Carnegie mellon university", "ranking2"=>"Ping-Pong", "subscribe"=>"1", "email"=>"spoorthi.kumar@gmail.com", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mParticipant Create (0.4ms)[0m   [0mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "email", "created_at", "ranking2", "subscribe", "state") VALUES('Pittsburgh', 'Poker', 'Kumar', 15289, '2010-09-20 15:59:59', '', 'Pool', NULL, 'Spoorthi', NULL, NULL, 'SMC 5801, Carnegie mellon university', 'spoorthi.kumar@gmail.com', '2010-09-20 15:59:59', 'Ping-Pong', '1', 'PA')[0m
+Redirected to http://localhost:3000/participants/25
+Completed in 19ms (DB: 0) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 11:59:59) [GET]
+  Parameters: {"id"=>"25"}
+  [4;36;1mParticipant Load (0.4ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 25) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/25]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 11:59:59) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:02:09) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Ping-Pong", "subscribe"=>"0", "email"=>"", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.4ms)
+Completed in 46ms (View: 30, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 12:02:09) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:02:54) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Ping-Pong", "subscribe"=>"0", "email"=>"", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 37ms (View: 26, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 12:02:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:03:12) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Ping-Pong", "subscribe"=>"0", "email"=>"", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 46ms (View: 33, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 12:03:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:03:26) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Ping-Pong", "subscribe"=>"0", "email"=>"", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 45ms (View: 33, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 12:03:26) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:05:10) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Ping-Pong", "subscribe"=>"0", "email"=>"", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 116ms (View: 103, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 12:05:10) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:05:22) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Ping-Pong", "subscribe"=>"0", "email"=>"", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 47ms (View: 32, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 12:05:22) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:05:25) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Ping-Pong", "subscribe"=>"0", "email"=>"", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 38ms (View: 25, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 12:05:25) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:05:44) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Ping-Pong", "subscribe"=>"0", "email"=>"", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 47ms (View: 35, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 12:05:44) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:06:02) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Ping-Pong", "subscribe"=>"0", "email"=>"", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 113ms (View: 27, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 12:06:02) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:06:16) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Ping-Pong", "subscribe"=>"0", "email"=>"", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 45ms (View: 33, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 12:06:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:22:03) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Ping-Pong", "subscribe"=>"0", "email"=>"", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+
+ActionView::TemplateError (undefined method `merge' for ["Pool", "Ping-pong"]:Array) on line #80 of app/views/participants/new.html.erb:
+77: 	
+78: 	<p>
+79: 		<%= "How many times have you attended this event?" %><br />
+80:     	<%= f.check_box :checkbox, (["Pool", "Ping-pong"]) %>
+81: 	</p>
+82: 	
+83: 	<hr>
+
+    app/views/participants/new.html.erb:80
+    app/views/participants/new.html.erb:19
+    app/controllers/participants_controller.rb:50:in `create'
+    app/controllers/participants_controller.rb:45:in `create'
+
+Rendered rescues/_trace (123.8ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:23:01) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Ping-Pong", "subscribe"=>"0", "email"=>"", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+
+ActionView::TemplateError (undefined method `checkbox' for #<Participant:0x24b6b74>) on line #80 of app/views/participants/new.html.erb:
+77: 	
+78: 	<p>
+79: 		<%= "How many times have you attended this event?" %><br />
+80:     	<%= f.select :checkbox, (["0", "1", "2", "More than 2"]) %>
+81: 	</p>
+82: 	
+83: 	<hr>
+
+    app/views/participants/new.html.erb:80
+    app/views/participants/new.html.erb:19
+    app/controllers/participants_controller.rb:50:in `create'
+    app/controllers/participants_controller.rb:45:in `create'
+
+Rendered rescues/_trace (51.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:23:44) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Ping-Pong", "subscribe"=>"0", "email"=>"", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+
+ActionView::TemplateError (undefined method `attendance' for #<Participant:0x2578918>) on line #80 of app/views/participants/new.html.erb:
+77: 	
+78: 	<p>
+79: 		<%= "How many times have you attended this event?" %><br />
+80:     	<%= f.select :attendance, (["0", "1", "2", "More than 2"]) %>
+81: 	</p>
+82: 	
+83: 	<hr>
+
+    app/views/participants/new.html.erb:80
+    app/views/participants/new.html.erb:19
+    app/controllers/participants_controller.rb:50:in `create'
+    app/controllers/participants_controller.rb:45:in `create'
+
+Rendered rescues/_trace (51.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:23:55) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Poker", "city"=>"", "zip"=>"", "address2"=>"", "lastName"=>"", "ranking"=>"Pool", "firstName"=>"", "address"=>"", "ranking2"=>"Ping-Pong", "subscribe"=>"0", "email"=>"", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 44ms (View: 31, DB: 0) | 200 OK [http://localhost/participants]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 12:23:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-20 12:28:01) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (11.5ms)
+Completed in 53ms (View: 36, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 12:28:01) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#new (for 127.0.0.1 at 2010-09-20 12:29:13) [GET]
+Rendering template within layouts/tickets
+Rendering tickets/new
+Rendered partials/_footer (0.3ms)
+Completed in 13ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-20 12:29:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/zebraevents.jpg" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 12:29:21) [POST]
+  Parameters: {"ticket"=>{"code"=>"456", "number"=>"345"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;36;1mTicket Create (0.5ms)[0m   [0;1mINSERT INTO "tickets" ("updated_at", "number", "code", "created_at") VALUES('2010-09-20 16:29:21', 345, '456', '2010-09-20 16:29:21')[0m
+Redirected to http://localhost:3000/participants/new
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/tickets]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-20 12:29:21) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 62ms (View: 27, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:29:21) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:29:58) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Pool", "city"=>"Pittsburgh", "zip"=>"15289", "address2"=>"dsfsd", "lastName"=>"Loloita", "ranking"=>"Ping-Pong", "firstName"=>"Lola", "attendance"=>"2", "address"=>"234, wfnwdf", "ranking2"=>"Poker", "subscribe"=>"0", "email"=>"lola@gmail.com", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mParticipant Create (0.4ms)[0m   [0mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "attendance", "email", "created_at", "ranking2", "subscribe", "state") VALUES('Pittsburgh', 'Pool', 'Loloita', 15289, '2010-09-20 16:29:58', 'dsfsd', 'Ping-Pong', NULL, 'Lola', NULL, NULL, '234, wfnwdf', 2, 'lola@gmail.com', '2010-09-20 16:29:58', 'Poker', '0', 'PA')[0m
+Redirected to http://localhost:3000/participants/26
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:29:58) [GET]
+  Parameters: {"id"=>"26"}
+  [4;36;1mParticipant Load (0.5ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 26) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.5ms)
+Completed in 19ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/26]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:29:58) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-20 12:30:35) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 24ms (View: 18, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:30:35) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-20 12:30:47) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 25ms (View: 18, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:30:47) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-20 12:31:27) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 24ms (View: 17, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:31:27) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-20 12:31:48) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 25ms (View: 18, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:31:48) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-20 12:32:17) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 24ms (View: 17, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:32:17) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:40:47) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Pool", "city"=>"Pittsburgh", "zip"=>"15289", "address2"=>"dsfsd", "lastName"=>"Loloita", "ranking"=>"Pool", "firstName"=>"Lola", "attendance"=>"0", "address"=>"234, wfnwdf", "ranking2"=>"Pool", "subscribe"=>"0", "email"=>"lola@gmail.com", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mParticipant Create (0.4ms)[0m   [0mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "attendance", "email", "created_at", "ranking2", "subscribe", "state") VALUES('Pittsburgh', 'Pool', 'Loloita', 15289, '2010-09-20 16:40:47', 'dsfsd', 'Pool', NULL, 'Lola', NULL, NULL, '234, wfnwdf', 0, 'lola@gmail.com', '2010-09-20 16:40:47', 'Pool', '0', 'PA')[0m
+Redirected to http://localhost:3000/participants/27
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:40:47) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mParticipant Load (0.4ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:40:47) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:41:30) [GET]
+  Parameters: {"id"=>"27"}
+  [4;35;1mParticipant Load (0.4ms)[0m   [0mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:41:30) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:42:00) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mParticipant Load (0.4ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 19ms (View: 11, DB: 0) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:42:00) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:42:19) [GET]
+  Parameters: {"id"=>"27"}
+  [4;35;1mParticipant Load (0.4ms)[0m   [0mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:42:19) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:42:20) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mParticipant Load (0.4ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:42:20) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:43:38) [GET]
+  Parameters: {"id"=>"27"}
+  [4;35;1mParticipant Load (0.4ms)[0m   [0mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:43:38) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:43:54) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mParticipant Load (0.4ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 20ms (View: 11, DB: 0) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:43:54) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:44:06) [GET]
+  Parameters: {"id"=>"27"}
+  [4;35;1mParticipant Load (0.5ms)[0m   [0mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 19ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:44:06) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:44:18) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mParticipant Load (0.4ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:44:18) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:44:30) [GET]
+  Parameters: {"id"=>"27"}
+  [4;35;1mParticipant Load (0.4ms)[0m   [0mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.4ms)
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:44:30) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:45:02) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mParticipant Load (0.4ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 84ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:45:02) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:45:32) [GET]
+  Parameters: {"id"=>"27"}
+  [4;35;1mParticipant Load (0.4ms)[0m   [0mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.4ms)
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:45:32) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:45:33) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mParticipant Load (0.4ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.4ms)
+Completed in 13ms (View: 5, DB: 0) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:45:34) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:45:55) [GET]
+  Parameters: {"id"=>"27"}
+  [4;35;1mParticipant Load (0.4ms)[0m   [0mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:45:55) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:46:09) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mParticipant Load (0.5ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.4ms)
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:46:09) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:46:18) [GET]
+  Parameters: {"id"=>"27"}
+  [4;35;1mParticipant Load (0.4ms)[0m   [0mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 18ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:46:18) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:46:18) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mParticipant Load (0.4ms)[0m   [0;1mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:46:18) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:46:29) [GET]
+  Parameters: {"id"=>"27"}
+  [4;35;1mParticipant Load (0.4ms)[0m   [0mSELECT * FROM "participants" WHERE ("participants"."id" = 27) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/participants/27]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:46:29) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:47:50) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Pool", "city"=>"Pittsburgh", "zip"=>"15289", "address2"=>"dsfsd", "lastName"=>"Loloita", "ranking"=>"Pool", "firstName"=>"Lola", "attendance"=>"0", "address"=>"234, wfnwdf", "ranking2"=>"Pool", "subscribe"=>"0", "email"=>"lola@gmail.com", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;36;1mParticipant Create (0.4ms)[0m   [0;1mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "attendance", "email", "created_at", "ranking2", "subscribe", "state") VALUES('Pittsburgh', 'Pool', 'Loloita', 15289, '2010-09-20 16:47:50', 'dsfsd', 'Pool', NULL, 'Lola', NULL, NULL, '234, wfnwdf', 0, 'lola@gmail.com', '2010-09-20 16:47:50', 'Pool', '0', 'PA')[0m
+Redirected to http://localhost:3000/participants/28
+Completed in 15ms (DB: 0) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:47:50) [GET]
+  Parameters: {"id"=>"28"}
+  [4;35;1mParticipant Load (0.5ms)[0m   [0mSELECT * FROM "participants" WHERE ("participants"."id" = 28) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://localhost/participants/28]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:47:50) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 12:51:46) [POST]
+  Parameters: {"ticket"=>{"code"=>"456", "number"=>"345"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;36;1mTicket Create (0.4ms)[0m   [0;1mINSERT INTO "tickets" ("updated_at", "number", "code", "created_at") VALUES('2010-09-20 16:51:46', 345, '456', '2010-09-20 16:51:46')[0m
+Redirected to http://localhost:3000/participants/new
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/tickets]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-20 12:51:46) [GET]
+
+SyntaxError (/Users/spoorthikumar/Desktop/precheckin/app/models/participant.rb:72: syntax error, unexpected kEND):
+  app/controllers/participants_controller.rb:27:in `new'
+
+Rendered rescues/_trace (39.6ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-20 12:53:34) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+
+ActionView::TemplateError (undefined method `number' for nil:NilClass) on line #1 of app/views/participants/new.html.erb:
+1: <% if @ticket.number > 300 %>
+2: 
+3: 	<%= stylesheet_link_tag 'scaffold', 'foundation'%>
+4: 	<center>
+
+    app/views/participants/new.html.erb:1
+    app/controllers/participants_controller.rb:29:in `new'
+
+Rendered rescues/_trace (119.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 12:55:59) [POST]
+  Parameters: {"ticket"=>{"code"=>"400", "number"=>"400"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;35;1mTicket Create (0.4ms)[0m   [0mINSERT INTO "tickets" ("updated_at", "number", "code", "created_at") VALUES('2010-09-20 16:55:59', 400, '400', '2010-09-20 16:55:59')[0m
+Redirected to http://localhost:3000/participants/new
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/tickets]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-20 12:55:59) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 25ms (View: 18, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:55:59) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ParticipantsController#create (for 127.0.0.1 at 2010-09-20 12:56:25) [POST]
+  Parameters: {"participant"=>{"ranking3"=>"Pool", "city"=>"Pittsburgh", "zip"=>"12345", "address2"=>"", "lastName"=>"popop", "ranking"=>"Pool", "firstName"=>"popo", "attendance"=>"1", "address"=>"popopo", "ranking2"=>"Pool", "subscribe"=>"0", "email"=>"popo@gmial.com", "state"=>"PA"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;36;1mParticipant Create (0.4ms)[0m   [0;1mINSERT INTO "participants" ("city", "ranking3", "lastName", "zip", "updated_at", "address2", "ranking", "attend", "firstName", "phone", "ticketId", "address", "attendance", "email", "created_at", "ranking2", "subscribe", "state") VALUES('Pittsburgh', 'Pool', 'popop', 12345, '2010-09-20 16:56:25', '', 'Pool', NULL, 'popo', NULL, NULL, 'popopo', 1, 'popo@gmial.com', '2010-09-20 16:56:25', 'Pool', '0', 'PA')[0m
+Redirected to http://localhost:3000/participants/29
+Completed in 17ms (DB: 0) | 302 Found [http://localhost/participants]
+
+
+Processing ParticipantsController#show (for 127.0.0.1 at 2010-09-20 12:56:25) [GET]
+  Parameters: {"id"=>"29"}
+  [4;35;1mParticipant Load (0.6ms)[0m   [0mSELECT * FROM "participants" WHERE ("participants"."id" = 29) [0m
+Rendering template within layouts/participants
+Rendering participants/show
+Rendered partials/_footer (0.3ms)
+Completed in 14ms (View: 4, DB: 1) | 200 OK [http://localhost/participants/29]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 12:56:25) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing TicketsController#create (for 127.0.0.1 at 2010-09-20 13:00:42) [POST]
+  Parameters: {"ticket"=>{"code"=>"400", "number"=>"400"}, "commit"=>"Submit", "authenticity_token"=>"75UFvz0nHaXx5Z1Kqk6ZWdyyFaFwMRN4onDLl/HNPYM="}
+  [4;36;1mTicket Create (0.4ms)[0m   [0;1mINSERT INTO "tickets" ("updated_at", "number", "code", "created_at") VALUES('2010-09-20 17:00:42', 400, '400', '2010-09-20 17:00:42')[0m
+Redirected to http://localhost:3000/participants/new
+Completed in 10ms (DB: 0) | 302 Found [http://localhost/tickets]
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-20 13:00:42) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+
+ActionView::TemplateError (undefined method `ticket' for #<ActionView::Base:0x2247398>) on line #1 of app/views/participants/new.html.erb:
+1: <% if ticket(@participant.id).number > 300%>
+2: 
+3: <%= stylesheet_link_tag 'scaffold', 'foundation'%>
+4: <center>
+
+    app/views/participants/new.html.erb:1
+    app/controllers/participants_controller.rb:29:in `new'
+
+Rendered rescues/_trace (45.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ParticipantsController#new (for 127.0.0.1 at 2010-09-20 13:05:59) [GET]
+Rendering template within layouts/participants
+Rendering participants/new
+Rendered partials/_footer (0.3ms)
+Completed in 24ms (View: 17, DB: 0) | 200 OK [http://localhost/participants/new]
+
+
+Processing ParticipantsController#images to jpg (for 127.0.0.1 at 2010-09-20 13:05:59) [GET]
+  Parameters: {"id"=>"zebraevents"}
+
+ActionController::UnknownAction (No action responded to images. Actions: confimation, create, destroy, edit, index, new, show, and update):
   
 
 Rendering rescues/layout (not_found)

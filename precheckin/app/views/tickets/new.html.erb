@@ -1,24 +1,29 @@
+
+<%= stylesheet_link_tag 'scaffold', 'foundation'%>
 <center>
-<table cellpadding="0" cellspacing="0" width="666" border="0" bgcolor="white" class="white">
-<TR>
-<td height="20">
-</td>
-</tr>
-<TR>
-<td colspan="2"><%= image_tag("inThePocket.jpg", :alt => "Main") %>
-</td>
-</tr>
+<table cellpadding="5" cellspacing="0" width="700" border="0" bgcolor="white" class="white">
 <tr>
-	<td width="300"><h1>Why Pre-Checkin?</h1>
+	<td height="20"></td>
+</tr>
+
+<tr>
+	<td colspan="2"><%= image_tag("inThePocket.jpg", :alt => "Main") %></td>
+</tr>
+
+<tr>
+	<td width="400px"><h1>Why Pre-Checkin?</h1>
+			It's easy<br>
+			It takes less than a minute<br>
+			It lets you get through the door faster to play games with your favorite Steeler!
+			<br>
+			<b>And..... Win a free gift at the event!<b>
 	</td>
-<td ><h1>Sign in with a Ticket</h1>(<%=link_to("help")%>)</td>
-</tr>
-<tr>
-	<td >-It's easy<br>
-		-It takes less than a minute<br>
-		-It lets you get through the door faster to play games with your favorite Steeler!
-		<br><br><br><br><br>
-<td >	
+	
+	<td width = "400px"><h1>Sign in with a Ticket</h1>(<%=link_to("Help")%>)
+
+
+
+	
 	<% form_for(@ticket) do |f| %>
 	  <%= f.error_messages %>
 
@@ -34,8 +39,8 @@
 	    <%= f.submit 'Submit' %>
 	  </p>
 	<% end %>
-	
-</td>
+	</td>
+
 </tr>
 
 
